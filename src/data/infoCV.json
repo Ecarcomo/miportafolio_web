@@ -1,0 +1,31 @@
+{
+        "proyectos": [
+          {
+            "id": 1,
+            "title": "pagina Web e-commerce"
+          },
+          {
+            "id": 2,
+            "title": "Darle un beso a Emi"
+          },
+          {
+            "id": 3,
+            "title": "Hacer cosas"
+          }
+        ],
+        "conocimientos": [
+          {
+            "id": 1,
+            "title": "Java"
+          },
+          {
+            "id": 2,
+            "title": "React"
+          },
+          {
+            "id": 3,
+            "title": "HTML"
+          }
+        ]
+      }
+
