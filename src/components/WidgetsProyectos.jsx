@@ -1,48 +1,42 @@
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+
 import React from 'react'
 import useProyectos from "../hooks/useProyectos"
 
  const WidgetsProyectos = () => {
   const {state , data} = useProyectos();
 
-        
-  if (state === "loading"){
-    return <> Loading </>
-  }
-  else if (state === "failed"){
-    return <> Failed </>
-  }
- console.log(data)
-  return (
-    <div>
-      <table style={{"border":"1px solid black"}}>
-      <thead>
-        <tr>
-          <th colSpan={8}>
-              <h3>Proyectos</h3>
-          </th>
-        </tr>
-        <tr>
-          {Object.keys(data[0]).map((col, index) => (
-            <th key={index}>{col}</th>
-          ))}
-        </tr>
-      </thead>
-        <tbody>
-          {
-            data.map((fila, index) => (
-                  <tr key={index}> 
-
-                  {Object.values(fila).map((val, index) => (
-                  <td key={index}>{val}</td>
-                  ))}
-
-                  </tr>
-          ))
+ return(
+      <Card border="primary">
+          <Card.Header as="h5">Proyectos</Card.Header>
+          <Card.Body>
+          {state==="success"?
+            (
+            <ListGroup className="list-group-flush">
+              {
+                data.map((fila, index) => (
+                    <ListGroup.Item  key={index}> 
+                      <Card.Title>{fila.title}</Card.Title>
+                      <Card.Text>  lorem ipsum - {fila.id}  </Card.Text>
+                      <Button variant="info">Ver Mas</Button>
+                    </ListGroup.Item>
+                ))
+              }
+            </ListGroup>
+            )
+            :
+            (
+              <Card.Title>{state}</Card.Title>
+            )
           }
-          </tbody>
-        </table>
-    </div>
-  )
+          </Card.Body>
+      </Card>
+ )
+  
 };
 
 export default WidgetsProyectos;
+
