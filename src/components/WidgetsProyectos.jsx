@@ -20,7 +20,10 @@ import useProyectos from "../hooks/useProyectos"
                 data.map((fila, index) => (
                     <ListGroup.Item  key={index}> 
                       <Card.Title>{fila.title}</Card.Title>
-                      <Card.Text>  lorem ipsum - {fila.id}  </Card.Text>
+                      <Card.Text>{fila.descrip.substring(0, 100)+"..."}</Card.Text>
+                      <footer className="blockquote-footer">
+                      <cite>{fila.tecnologias.substring(0, 50)+"..."}</cite>
+                       </footer>
                       <Button variant="info">Ver Mas</Button>
                     </ListGroup.Item>
                 ))

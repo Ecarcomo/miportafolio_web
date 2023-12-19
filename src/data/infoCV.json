@@ -2,15 +2,21 @@
         "proyectos": [
           {
             "id": 1,
-            "title": "pagina Web e-commerce"
+            "title": "Participación – Proyecto Tarjeta Prepaga Carrefour – Lanzamiento Mayo 2023",
+            "descrip":"Colaboré en el desarrollo diferentes funcionalidades para la gestión del nuevo producto de Tarjeta Prepaga a lanzar  por nuestro cliente Carrefour, Desarrollando el alta/baja de tarjeta como los ajustes de saldos y códigos de error de tarjetas proporcionados por  el procesador de pagos PRISMA.",
+            "tecnologias":"C / C++, PL SQL Oracle, HTML, CSS, JS"
           },
           {
             "id": 2,
-            "title": "Darle un beso a Emi"
+            "title": "Matriz LED controlada por WIFI desde GUI",
+            "descrip":"Trabajo Final – Materia Informática II – UTN FRBA –Trabajo Grupal 2 personas",
+            "tecnologias":"Programación de Drivers para microcontrolador LPC1769 en lenguaje C seteo de protocolos GPIO, comunicación  UART con módulo WiFi Esp8266, uso de punteros, memoria dinámica y diseño de máquina de estados. Desarrollo de GUI para control remoto de Matriz LED con lenguaje C++ y framework QT, conexión remota mediante Socket y conexión a API de  Hora y temperatura. Los cuales brindan datos que se visualizan en la matriz."
           },
           {
             "id": 3,
-            "title": "Hacer cosas"
+            "title": "Pagina E-commerce FrontEnd & BanckEnd en React NodeJS and Nest Enviroment",
+            "descrip":"Proyecto Personal",
+            "tecnologias":"Sitio Web con carrito de compras hecho con Framework React JS para FrontEnd. Nest Enviroment para el armado del BackEnd."
           }
         ],
         "conocimientos": [
