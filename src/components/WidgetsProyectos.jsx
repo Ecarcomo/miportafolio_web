@@ -6,11 +6,11 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import React from 'react'
 import useProyectos from "../hooks/useProyectos"
 
- const WidgetsProyectos = () => {
+ const WidgetsProyectos = ({mode}) => {
   const {state , data} = useProyectos();
 
  return(
-      <Card border="primary">
+      <Card border="primary" data-bs-theme={mode}>
           <Card.Header as="h5">Proyectos</Card.Header>
           <Card.Body>
           {state==="success"?

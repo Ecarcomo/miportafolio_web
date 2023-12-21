@@ -1,4 +1,14 @@
-{
+{       "info_general":
+        { 
+          "nombre":"Emmanuel Diego Carcomo",
+          "profesion":"Desarrollador Web FullStack Junior",
+          "Lugar":"CABA , Buenos Aires",
+          "fecha_nacimiento":"01/01/1997",
+          "num_tel":"+54 9 11 3765 - 8523",
+          "link_github":"github.com/Ecarcomo",
+          "link_linkedin":"linkedin.com/in/emmanuel-carcomo-2346a8113",
+          "img_src":"../img/user_profile.png"
+        },
         "proyectos": [
           {
             "id": 1,

@@ -25,6 +25,18 @@ export const getConocimientos = createAsyncThunk(
                 throw Error('Error fetching data');
         }
 });
+
+export const getInfoGeneral = createAsyncThunk(
+        'get-info_general',
+        async () => {
+        try {
+                // Puedes usar la información del archivo JSON directamente
+                // O realizar cualquier procesamiento necesario aquí
+                return infoCV.info_general;
+        } catch (error) {
+                throw Error('Error fetching data');
+        }
+});
       
 
 

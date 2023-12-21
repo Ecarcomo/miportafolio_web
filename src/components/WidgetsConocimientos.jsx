@@ -4,11 +4,11 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import React from 'react'
 import useConocimientos from "../hooks/useConocimientos"
 
- const WidgetsConocimientos = () => {
+ const WidgetsConocimientos = ({mode}) => {
   const {state , data} = useConocimientos();
 
   return (
-    <Card border="primary">
+    <Card border="primary" data-bs-theme={mode}>
       <Card.Header as="h5">Conocimientos</Card.Header>
       <Card.Body>
       {state==="success"?

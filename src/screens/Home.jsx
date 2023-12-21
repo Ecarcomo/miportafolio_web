@@ -4,14 +4,20 @@ import Col from 'react-bootstrap/Col';
 
 import WidgetsProyectos from "../components/WidgetsProyectos"
 import WidgetsConocimientos from "../components/WidgetsConocimientos"
+import HeaderInfoGeneral from "../components/HeaderInfoGeneral"
 
-const Home = () => {
+const Home = ({mode}) => {
         return (
         <>
-          <Container fluid="lg">
+          <Container fluid="xxl" >
+            <br></br>
             <Row>
-              <Col><WidgetsProyectos/></Col>
-              <Col><WidgetsConocimientos/></Col>
+              <Col><HeaderInfoGeneral mode={mode}/></Col>
+            </Row>
+            <br></br>
+            <Row>
+              <Col><WidgetsProyectos mode={mode}/></Col>
+              <Col><WidgetsConocimientos mode={mode}/></Col>
             </Row>
           </Container>
         </>
