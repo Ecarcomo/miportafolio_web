@@ -9,24 +9,24 @@ import Col from 'react-bootstrap/Col';
 const HeaderInfoGeneral = ({mode}) => {
     const {state , data} = useInfoGeneral();
     return (
-        <Card data-bs-theme={mode}>
+        <Card border="primary" data-bs-theme={mode}>
         <Card.Body>
         {state==="success"?
           (
             <Container fluid="lg" >
-                <Row>
+                <Row style={{"align-items": "center"}}>
                     <Col sm={2}>
-                        <img width='100px' alt={data.nombre} src={data.img_src}></img>
+                        <Card.Img className='imgProfile' src={data.img_src} />
                     </Col>
                     <Col sm={5}> 
-                        <p>{data.nombre}</p>
-                        <p>{data.profesion}</p>
-                        <p>{data.Lugar} / Nacimiento: {data.fecha_nacimiento}</p>
+                        <h4><strong>{data.nombre}</strong></h4>
+                        <p><strong>{data.profesion}</strong></p>
+                        <cite>{data.Lugar} / Nacimiento: {data.fecha_nacimiento}</cite>
                     </Col>
                     <Col sm={5}>
                         <p>Telefono : {data.num_tel}</p>
-                        <p>{data.link_github}</p>
-                        <p>{data.link_linkedin}</p>
+                        <p><a href={data.link_github} >{data.link_github}</a></p>
+                        <p><a href={data.link_linkedin} >{data.link_linkedin}</a></p>
                     </Col>
                 </Row>
             </Container>

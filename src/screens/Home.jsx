@@ -9,7 +9,7 @@ import HeaderInfoGeneral from "../components/HeaderInfoGeneral"
 const Home = ({mode}) => {
         return (
         <>
-          <Container fluid="xxl" >
+          <Container fluid="xxl" style={{"backgroundColor":(mode ==="dark"?"black":"white")}} >
             <br></br>
             <Row>
               <Col><HeaderInfoGeneral mode={mode}/></Col>

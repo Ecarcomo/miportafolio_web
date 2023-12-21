@@ -7,7 +7,7 @@
           "num_tel":"+54 9 11 3765 - 8523",
           "link_github":"github.com/Ecarcomo",
           "link_linkedin":"linkedin.com/in/emmanuel-carcomo-2346a8113",
-          "img_src":"../img/user_profile.png"
+          "img_src":"../img/cvfoto1.png"
         },
         "proyectos": [
           {
@@ -29,19 +29,34 @@
             "tecnologias":"Sitio Web con carrito de compras hecho con Framework React JS para FrontEnd. Nest Enviroment para el armado del BackEnd."
           }
         ],
-        "conocimientos": [
-          {
-            "id": 1,
-            "title": "Java"
-          },
-          {
-            "id": 2,
-            "title": "React"
-          },
-          {
-            "id": 3,
-            "title": "HTML"
-          }
-        ]
+        "conocimientos": {
+          "h_duras":  [ 
+                        {
+                          "title":"Lenguajes",
+                          "texto":"C , C++ , React JS , JAVA , Python, MySQL ,PL/SQL Oracle"
+                        },
+                        {
+                          "title":"Aplica en",
+                          "texto":"Webs , Webservices , Android , Arduino"
+                        },
+                        {
+                          "title":"O.S.",
+                          "texto":"Ubuntu Linux Terminal , Windows CMD"
+                        },
+                        {
+                          "title":"Idiomas",
+                          "texto":"Ingles Intermedio Pre-First (Speech & Listering)"
+                        }
+                      ]
+          ,
+          "h_blandas":[ 
+                        "Buena Comunicación",
+                        "Creativo/Proactivo",
+                        "Gestión del tiempo",
+                        "Metodologías Agiles",
+                        "Buscar Sinergia",
+                        "Ética laboral"
+                      ]
+        }
       }
 

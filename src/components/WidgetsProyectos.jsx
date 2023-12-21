@@ -11,7 +11,7 @@ import useProyectos from "../hooks/useProyectos"
 
  return(
       <Card border="primary" data-bs-theme={mode}>
-          <Card.Header as="h5">Proyectos</Card.Header>
+          <Card.Header as="h4">Proyectos</Card.Header>
           <Card.Body>
           {state==="success"?
             (

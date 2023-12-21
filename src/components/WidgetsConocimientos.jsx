@@ -9,20 +9,33 @@ import useConocimientos from "../hooks/useConocimientos"
 
   return (
     <Card border="primary" data-bs-theme={mode}>
-      <Card.Header as="h5">Conocimientos</Card.Header>
+      <Card.Header as="h4">Conocimientos</Card.Header>
       <Card.Body>
       {state==="success"?
         (
-        <ListGroup className="list-group-flush">
-          {
-            data.map((fila, index) => (
-                <ListGroup.Item  key={index}> 
-                  <Card.Title>{fila.title}</Card.Title>
-                  <Card.Text>  lorem ipsum - {fila.id}  </Card.Text>
-                </ListGroup.Item>
-            ))
-          }
-        </ListGroup>
+          <>
+            <ListGroup className="list-group-flush">
+              <Card.Header as="h5">Habilidades Duras</Card.Header>
+              {
+                data.h_duras.map((fila, index) => (
+                  <ListGroup.Item key={index}>
+                        <Card.Title>{fila.title}</Card.Title>
+                        <Card.Text>{fila.texto}</Card.Text>
+                  </ListGroup.Item>
+                ))
+              }
+            </ListGroup>
+            <ListGroup className="list-group-flush">
+              <Card.Header as="h5">Habilidades Duras</Card.Header>
+              {
+                data.h_blandas.map((fila, index) => (
+                  <ListGroup.Item key={index}>
+                        <Card.Text>{fila}</Card.Text>
+                  </ListGroup.Item>
+                ))
+              }
+            </ListGroup>
+          </>
         )
         :
         (

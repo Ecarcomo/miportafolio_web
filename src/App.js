@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Navigation from "./routes/navigation"
 import useConfig from "./hooks/useConfig"
+import "./estilos/style.css"
 
 function App() {
   const {mode} = useConfig();
