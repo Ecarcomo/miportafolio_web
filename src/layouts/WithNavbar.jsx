@@ -21,6 +21,12 @@ const WithNavbar = () => {
               Portafolio - Emmanuel Diego Carcomo
             </Navbar.Brand>
             <Form>
+            <Form.Check
+                type="switch"
+                label="English/Español"
+                id="disabled-custom-switch"
+                style={{"color": (bg_color ==="white"?"black":"white")}}
+              />
               <Form.Check
                 type="switch"
                 label="Dark Mode"
