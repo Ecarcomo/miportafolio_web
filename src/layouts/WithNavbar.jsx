@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import useConfig from "../hooks/useConfig"
 
 const WithNavbar = () => {
-  const {handleToggleMode , mode} = useConfig();
+  const {handleToggleMode , mode , bg_color} = useConfig();
   return (
     <>
       <Navbar sticky="top" data-bs-theme={mode} className="bg-body-tertiary">
@@ -26,7 +26,7 @@ const WithNavbar = () => {
                 label="Dark Mode"
                 id="disabled-custom-switch"
                 onClick={handleToggleMode}
-                style={{"color":(mode ==="light"?"black":"white")}}
+                style={{"color": (bg_color ==="white"?"black":"white")}}
               />
             </Form>
           </Container>
@@ -34,7 +34,7 @@ const WithNavbar = () => {
         <Outlet/>
       <Navbar data-bs-theme={mode} sticky="bottom" className="bg-body-tertiary">
         <Container>
-          <h5 style={{"color":(mode ==="light"?"black":"white")}}>Sitio Web Desarrollado Bajo ReactJS y Boostrap</h5>
+          <h5 style={{"color":(bg_color ==="white"?"black":"white")}}>Sitio Web Desarrollado Bajo ReactJS y Boostrap</h5>
         </Container>
       </Navbar>
     </>

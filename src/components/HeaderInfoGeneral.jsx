@@ -1,5 +1,6 @@
 import React from 'react'
 import useInfoGeneral from "../hooks/useInfoGeneral"
+import { Link } from 'react-router-dom';
 
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
@@ -24,9 +25,13 @@ const HeaderInfoGeneral = ({mode}) => {
                         <cite>{data.Lugar} / Nacimiento: {data.fecha_nacimiento}</cite>
                     </Col>
                     <Col sm={5}>
-                        <p>Telefono : {data.num_tel}</p>
-                        <p><a href={data.link_github} >{data.link_github}</a></p>
-                        <p><a href={data.link_linkedin} >{data.link_linkedin}</a></p>
+                        <small>Telefono:    {data.num_tel}</small>
+                        <br></br>
+                        <small>Email:   {data.email}</small>
+                        <hr></hr>
+                        <small><Link target="_blank" to={"https://"+data.link_github} >{data.link_github}</Link></small>
+                        <br></br>
+                        <small><Link target="_blank" to={"https://"+data.link_linkedin} >{data.link_linkedin}</Link></small>
                     </Col>
                 </Row>
             </Container>
