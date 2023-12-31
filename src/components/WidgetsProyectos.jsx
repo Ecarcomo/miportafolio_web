@@ -5,6 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import React from 'react'
 import useProyectos from "../hooks/useProyectos"
+import Spinner from 'react-bootstrap/Spinner';
 
  const WidgetsProyectos = ({mode}) => {
   const {state , data} = useProyectos();
@@ -32,7 +33,7 @@ import useProyectos from "../hooks/useProyectos"
             )
             :
             (
-              <Card.Title>{state}</Card.Title>
+              <Card.Title><Spinner animation="grow" /></Card.Title>
             )
           }
           </Card.Body>

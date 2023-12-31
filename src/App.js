@@ -4,10 +4,10 @@ import useConfig from "./hooks/useConfig"
 import "./estilos/style.css"
 
 function App() {
-  const {mode,bg_color} = useConfig();
+  const {mode,bg_color,language} = useConfig();
   return (
     <>
-      <Navigation mode={mode} bg_color={bg_color}/>
+      <Navigation  mode={mode} bg_color={bg_color} language={language}/>
     </>
   );
 }

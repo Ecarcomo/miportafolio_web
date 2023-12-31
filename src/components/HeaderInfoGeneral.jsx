@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
+
+import Spinner from 'react-bootstrap/Spinner';
 
 const HeaderInfoGeneral = ({mode}) => {
     const {state , data} = useInfoGeneral();
@@ -14,17 +17,17 @@ const HeaderInfoGeneral = ({mode}) => {
         <Card.Body>
         {state==="success"?
           (
-            <Container fluid="lg" >
-                <Row style={{"align-items": "center"}}>
-                    <Col sm={2}>
-                        <Card.Img className='imgProfile' src={data.img_src} />
+            <Container >
+                <Row   className='gy-3'  style={{"align-items": "center"}}>
+                    <Col style={{"text-align": "center"}}>
+                        <Image className='imgProfile' src={data.img_src}   />
                     </Col>
-                    <Col sm={5}> 
+                    <Col > 
                         <h4><strong>{data.nombre}</strong></h4>
                         <p><strong>{data.profesion}</strong></p>
                         <cite>{data.Lugar} / Nacimiento: {data.fecha_nacimiento}</cite>
                     </Col>
-                    <Col sm={5}>
+                    <Col >
                         <small>Telefono:    {data.num_tel}</small>
                         <br></br>
                         <small>Email:   {data.email}</small>
@@ -38,7 +41,7 @@ const HeaderInfoGeneral = ({mode}) => {
           )
           :
           (
-            <Card.Title>{state}</Card.Title>
+            <Card.Title><Spinner animation="grow" /></Card.Title>
           )
         }
         </Card.Body>

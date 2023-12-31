@@ -4,10 +4,11 @@ import { getProyectos } from "../helpers/getters";
 
 const useProyectos = () => {
   const { state , data} = useSelector((store) => store.proyectos);
+  const {language} = useSelector((store) => store.config);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProyectos());
+    dispatch(getProyectos(language));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

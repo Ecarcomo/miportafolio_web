@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import React from 'react'
 import useEducacionFormal from "../hooks/useEducacionFormal"
+import Spinner from 'react-bootstrap/Spinner';
 
  const WidgetsEducacion = ({mode}) => {
   const {state , data} = useEducacionFormal();
@@ -31,7 +32,7 @@ import useEducacionFormal from "../hooks/useEducacionFormal"
             )
             :
             (
-              <Card.Title>{state}</Card.Title>
+              <Card.Title><Spinner animation="grow" /></Card.Title>
             )
           }
           </Card.Body>

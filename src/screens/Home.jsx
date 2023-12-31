@@ -9,30 +9,34 @@ import WidgetsExpLaboral from "../components/WidgetsExpLaboral"
 import HeaderInfoGeneral from "../components/HeaderInfoGeneral"
 
 
-const Home = ({mode,bg_color}) => {
+const Home = ({mode,bg_color,language}) => {
         return (
-        <>
-          <Container fluid="xxl" style={{"backgroundColor":bg_color}} >
+        <div style={{"backgroundColor":bg_color}}>
+          <Container
+           fluid='xl' 
+           lg='12'
+           md='12'
+          >
             <br></br>
-            <Row>
-              <Col><HeaderInfoGeneral mode={mode}/></Col>
+            <Row >
+              <Col ><HeaderInfoGeneral mode={mode} language={language}/></Col>
             </Row>
             <br></br>
-            <Row>
-              <Col><WidgetsExpLaboral mode={mode}/></Col>
+            <Row >
+              <Col ><WidgetsExpLaboral mode={mode} language={language}/></Col>
             </Row>
             <br></br>
-            <Row>
-              <Col><WidgetsEducacion mode={mode}/></Col>
+            <Row >
+              <Col ><WidgetsEducacion mode={mode} language={language}/></Col>
             </Row>
             <br></br>
-            <Row>
-              <Col><WidgetsProyectos mode={mode}/></Col>
-              <Col><WidgetsConocimientos mode={mode}/></Col>
+            <Row className='gy-3' >
+              <Col lg='6' md='12'><WidgetsProyectos mode={mode} language={language}/></Col>
+              <Col lg='6' md='12'><WidgetsConocimientos mode={mode} language={language}/></Col>
             </Row>
             <br></br>
           </Container>
-        </>
+        </div>
         )
       }
       

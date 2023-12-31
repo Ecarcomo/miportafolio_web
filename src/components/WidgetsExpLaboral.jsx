@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import React from 'react'
 import useExpLaboral from "../hooks/useExpLaboral"
+import Spinner from 'react-bootstrap/Spinner';
 
  const WidgetsExpLaboral = ({mode}) => {
   const {state , data} = useExpLaboral();
@@ -42,7 +43,7 @@ import useExpLaboral from "../hooks/useExpLaboral"
             )
             :
             (
-              <Card.Title>{state}</Card.Title>
+              <Card.Title><Spinner animation="grow" /></Card.Title>
             )
           }
           </Card.Body>

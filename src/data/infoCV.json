@@ -1,144 +1,292 @@
-{       "info_general":
-        { 
-          "nombre":"Emmanuel Diego Carcomo",
-          "profesion":"Desarrollador Web FullStack Junior",
-          "Lugar":"CABA , Buenos Aires",
-          "fecha_nacimiento":"01/01/1997",
-          "num_tel":"+54 9 11 3765 8523",
-          "email":"emmanuelcarcomo@gmail.com",
-          "link_github":"github.com/Ecarcomo",
-          "link_linkedin":"linkedin.com/in/emmanuel-carcomo-2346a8113",
-          "img_src":"../img/cvfoto1.png"
-        },
-        "proyectos": [
-          {
-            "id": 1,
-            "title": "Participación – Proyecto Tarjeta Prepaga Carrefour – Lanzamiento Mayo 2023",
-            "descrip":"Colaboré en el desarrollo diferentes funcionalidades para la gestión del nuevo producto de Tarjeta Prepaga a lanzar  por nuestro cliente Carrefour, Desarrollando el alta/baja de tarjeta como los ajustes de saldos y códigos de error de tarjetas proporcionados por  el procesador de pagos PRISMA.",
-            "tecnologias":"C / C++, PL SQL Oracle, HTML, CSS, JS"
-          },
-          {
-            "id": 2,
-            "title": "Matriz LED controlada por WIFI desde GUI",
-            "descrip":"Trabajo Final – Materia Informática II – UTN FRBA –Trabajo Grupal 2 personas",
-            "tecnologias":"Programación de Drivers para microcontrolador LPC1769 en lenguaje C seteo de protocolos GPIO, comunicación  UART con módulo WiFi Esp8266, uso de punteros, memoria dinámica y diseño de máquina de estados. Desarrollo de GUI para control remoto de Matriz LED con lenguaje C++ y framework QT, conexión remota mediante Socket y conexión a API de  Hora y temperatura. Los cuales brindan datos que se visualizan en la matriz."
-          },
-          {
-            "id": 3,
-            "title": "Pagina E-commerce FrontEnd & BanckEnd en React NodeJS and Nest Enviroment",
-            "descrip":"Proyecto Personal",
-            "tecnologias":"Sitio Web con carrito de compras hecho con Framework React JS para FrontEnd. Nest Enviroment para el armado del BackEnd."
-          }
-        ],
-        "conocimientos": {
-          "h_duras":  [ 
-                        {
-                          "title":"Lenguajes",
-                          "texto":"C , C++ , React JS , JAVA , Python, MySQL ,PL/SQL Oracle"
-                        },
-                        {
-                          "title":"Aplica en",
-                          "texto":"Webs , Webservices , Android , Arduino"
-                        },
-                        {
-                          "title":"O.S.",
-                          "texto":"Ubuntu Linux Terminal , Windows CMD"
-                        },
-                        {
-                          "title":"Idiomas",
-                          "texto":"Ingles Intermedio Pre-First (Speech & Listering)"
-                        }
-                      ]
-          ,
-          "h_blandas":[ 
-                        "Buena Comunicación",
-                        "Creativo/Proactivo",
-                        "Gestión del tiempo",
-                        "Metodologías Agiles",
-                        "Buscar Sinergia",
-                        "Ética laboral"
-                      ]
-        },
-        "educacion_formal": [
-          {
-            "id": 1,
-            "institucion":  "Universidad Tecnológica Nacional (UTN FRBA) ",
-            "titulo":       "Ingeniería Electrónica",
-            "intervalo":    "(2016-2019)",
-            "descripcion":  "Hasta 3er Año – Conocimientos en algebra y análisis matemático, Programación de microcontroladores en C y C++ (POO), comunicación UART"
-          },
-          {
-            "id": 2,
-            "institucion":"Técnico Informático ",
-            "titulo":"Escuela N°32 D.E. 14 “Gral. José De San Martin",
-            "intervalo":"(2010 -2015)",
-            "descripcion":"Lenguajes C#, JAVA (POO) y C. Manejo de Base de datos con MySQL y desarrollo de drone con Arduino"
-          }
-        ],
-        "exp_laboral": [
-          {
-            "id": 1,
-            "empresa":  {
-              "tipo":"Empresa",
-              "nombre":"ADV Technology "
-            },
-            "sector":     "Software Financiero – Servicios BPO",
-            "puestos":   [
-              {
-                "intervalo":"(Mayo 2023 - Actualidad)",
-                "breve":"Team Líder para cliente BSF (Banco De Servicios Financieros de Carrefour",
-                "tareas":[
-                  "Seguimiento de Desarrollos y solución de incidentes correspondientes a mi equipo de desarrolladores, Daylis Scrum con el equipo y reuniones con funcionales de nuestro cliente a cargo",
-                  "Apoyo Técnico a mi equipo",
-                  "Fortalecer el buen clima laboral"
+{
+  "español":  { "info_general":
+                { 
+                  "nombre":"Emmanuel Diego Carcomo",
+                  "profesion":"Desarrollador Web FullStack Junior",
+                  "Lugar":"CABA , Buenos Aires",
+                  "fecha_nacimiento":"01/01/1997",
+                  "num_tel":"+54 9 11 3765 8523",
+                  "email":"emmanuelcarcomo@gmail.com",
+                  "link_github":"github.com/Ecarcomo",
+                  "link_linkedin":"linkedin.com/in/emmanuel-carcomo-2346a8113",
+                  "img_src":"../img/cvfoto1.png"
+                },
+                "proyectos": [
+                  {
+                    "id": 1,
+                    "title": "Participación – Proyecto Tarjeta Prepaga Carrefour – Lanzamiento Mayo 2023",
+                    "descrip":"Colaboré en el desarrollo diferentes funcionalidades para la gestión del nuevo producto de Tarjeta Prepaga a lanzar  por nuestro cliente Carrefour, Desarrollando el alta/baja de tarjeta como los ajustes de saldos y códigos de error de tarjetas proporcionados por  el procesador de pagos PRISMA.",
+                    "tecnologias":"C / C++, PL SQL Oracle, HTML, CSS, JS"
+                  },
+                  {
+                    "id": 2,
+                    "title": "Matriz LED controlada por WIFI desde GUI",
+                    "descrip":"Trabajo Final – Materia Informática II – UTN FRBA –Trabajo Grupal 2 personas",
+                    "tecnologias":"Programación de Drivers para microcontrolador LPC1769 en lenguaje C seteo de protocolos GPIO, comunicación  UART con módulo WiFi Esp8266, uso de punteros, memoria dinámica y diseño de máquina de estados. Desarrollo de GUI para control remoto de Matriz LED con lenguaje C++ y framework QT, conexión remota mediante Socket y conexión a API de  Hora y temperatura. Los cuales brindan datos que se visualizan en la matriz."
+                  },
+                  {
+                    "id": 3,
+                    "title": "Pagina E-commerce FrontEnd & BanckEnd en React NodeJS and Nest Enviroment",
+                    "descrip":"Proyecto Personal",
+                    "tecnologias":"Sitio Web con carrito de compras hecho con Framework React JS para FrontEnd. Nest Enviroment para el armado del BackEnd."
+                  }
+                ],
+                "conocimientos": {
+                  "h_duras":  [ 
+                                {
+                                  "title":"Lenguajes",
+                                  "texto":"C , C++ , React JS , JAVA , Python, MySQL ,PL/SQL Oracle"
+                                },
+                                {
+                                  "title":"Aplica en",
+                                  "texto":"Webs , Webservices , Android , Arduino"
+                                },
+                                {
+                                  "title":"O.S.",
+                                  "texto":"Ubuntu Linux Terminal , Windows CMD"
+                                },
+                                {
+                                  "title":"Idiomas",
+                                  "texto":"Ingles Intermedio Pre-First (Speech & Listering)"
+                                }
+                              ]
+                  ,
+                  "h_blandas":[ 
+                                "Buena Comunicación",
+                                "Creativo/Proactivo",
+                                "Gestión del tiempo",
+                                "Metodologías Agiles",
+                                "Buscar Sinergia",
+                                "Ética laboral"
+                              ]
+                },
+                "educacion_formal": [
+                  {
+                    "id": 1,
+                    "institucion":  "Universidad Tecnológica Nacional (UTN FRBA) ",
+                    "titulo":       "Ingeniería Electrónica",
+                    "intervalo":    "(2016-2019)",
+                    "descripcion":  "Hasta 3er Año – Conocimientos en algebra y análisis matemático, Programación de microcontroladores en C y C++ (POO), comunicación UART"
+                  },
+                  {
+                    "id": 2,
+                    "institucion":"Técnico Informático ",
+                    "titulo":"Escuela N°32 D.E. 14 “Gral. José De San Martin",
+                    "intervalo":"(2010 -2015)",
+                    "descripcion":"Lenguajes C#, JAVA (POO) y C. Manejo de Base de datos con MySQL y desarrollo de drone con Arduino"
+                  }
+                ],
+                "exp_laboral": [
+                  {
+                    "id": 1,
+                    "empresa":  {
+                      "tipo":"Empresa",
+                      "nombre":"ADV Technology "
+                    },
+                    "sector":     "Software Financiero – Servicios BPO",
+                    "puestos":   [
+                      {
+                        "intervalo":"(Mayo 2023 - Actualidad)",
+                        "breve":"Team Líder para cliente BSF (Banco De Servicios Financieros de Carrefour",
+                        "tareas":[
+                          "Seguimiento de Desarrollos y solución de incidentes correspondientes a mi equipo de desarrolladores, Daylis Scrum con el equipo y reuniones con funcionales de nuestro cliente a cargo",
+                          "Apoyo Técnico a mi equipo",
+                          "Fortalecer el buen clima laboral"
+                        ]
+                      },
+                      {
+                        "intervalo":"(Mayo 2022 - Abril 2023)",
+                        "breve":"Desarrollador Web FullStack",
+                        "tareas":[
+                          "Desarrollo y Solución de Incidentes utilizando tecnologías como HTML, JS y CSS en FrontEnd , C y PL/SQL Oracle en BackEnd. Utilización y desarrollo de WebService"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 2,
+                    "empresa":  {
+                      "tipo":"Emprendimiento",
+                      "nombre":"DevAds - Development & Advertising"
+                    },
+                    "sector":     "Desarrollo Web y Publicidad Online – PyME",
+                    "puestos":   [
+                      {
+                        "intervalo":"(2017 - 2022)",
+                        "breve":"Desarrollador y Publicista Web",
+                        "tareas":[
+                          "Desarrollo y diseño de sitios webs basados en CMS Wordpress, utilizando tecnologías HTML , CSS y JS . Plugins en PHP y sincronización de posteos con redes sociales.",
+                          "Creación y Monitorea de Campañas en Google Ads y Meta Ads",
+                          "Venta , autopromoción y marketing convencional y digital"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 3,
+                    "empresa":  {
+                      "tipo":"Emprendimiento",
+                      "nombre":"ROOT Soluciones informáticas"
+                    },
+                    "sector":     "Desarrollo Web y Servicio Técnico",
+                    "puestos":   [
+                      {
+                        "intervalo":"(2015 - 2017)",
+                        "breve":"Técnico IT",
+                        "tareas":[
+                          "Desarrollo y diseño de sitios webs basados en CMS Wordpress , utilizando tecnologías HTML , CSS y JS . Plugins en PH",
+                          "Servicio Técnico de PC e instalación de redes informáticas"
+                        ]
+                      }
+                    ]
+                  }
                 ]
               },
-              {
-                "intervalo":"(Mayo 2022 - Abril 2023)",
-                "breve":"Desarrollador Web FullStack",
-                "tareas":[
-                  "Desarrollo y Solución de Incidentes utilizando tecnologías como HTML, JS y CSS en FrontEnd , C y PL/SQL Oracle en BackEnd. Utilización y desarrollo de WebService"
+  "english": {    "general_info": {
+                  "name": "Emmanuel Diego Carcomo",
+                  "profession": "Junior FullStack Web Developer",
+                  "location": "CABA, Buenos Aires",
+                  "birthdate": "01/01/1997",
+                  "phone_number": "+54 9 11 3765 8523",
+                  "email": "emmanuelcarcomo@gmail.com",
+                  "github_link": "github.com/Ecarcomo",
+                  "linkedin_link": "linkedin.com/in/emmanuel-carcomo-2346a8113",
+                  "img_src": "../img/cvfoto1.png"
+                },
+                "projects": [
+                  {
+                    "id": 1,
+                    "title": "Participation – Carrefour Prepaid Card Project – Launch May 2023",
+                    "description": "Collaborated in the development of various functionalities for managing the new Carrefour Prepaid Card product. Developed card activation/deactivation, balance adjustments, and error code handling for cards provided by the PRISMA payment processor.",
+                    "technologies": "C / C++, PL SQL Oracle, HTML, CSS, JS"
+                  },
+                  {
+                    "id": 2,
+                    "title": "WiFi-Controlled LED Matrix from GUI",
+                    "description": "Final Project – Computer Science II Subject – UTN FRBA – Group Project 2 people",
+                    "technologies": "C programming for LPC1769 microcontroller, GPIO protocol setup, UART communication with Esp8266 WiFi module, use of pointers, dynamic memory, and state machine design. GUI development for remote control of LED Matrix using C++ and QT framework, remote connection via Socket, and connection to Hour and Temperature API."
+                  },
+                  {
+                    "id": 3,
+                    "title": "E-commerce Website FrontEnd & BackEnd in React NodeJS and Nest Environment",
+                    "description": "Personal Project",
+                    "technologies": "Website with shopping cart made with React JS for FrontEnd. Nest Environment for BackEnd development."
+                  }
+                ],
+                "skills": {
+                  "hard_skills": [
+                    {
+                      "title": "Languages",
+                      "text": "C, C++, React JS, JAVA, Python, MySQL, PL/SQL Oracle"
+                    },
+                    {
+                      "title": "Applies to",
+                      "text": "Websites, Web services, Android, Arduino"
+                    },
+                    {
+                      "title": "Operating Systems",
+                      "text": "Ubuntu Linux Terminal, Windows CMD"
+                    },
+                    {
+                      "title": "Languages",
+                      "text": "Intermediate Pre-First English (Speech & Listening)"
+                    }
+                  ],
+                  "soft_skills": [
+                    "Good Communication",
+                    "Creative/Proactive",
+                    "Time Management",
+                    "Agile Methodologies",
+                    "Seeking Synergy",
+                    "Work Ethic"
+                  ]
+                },
+                "formal_education": [
+                  {
+                    "id": 1,
+                    "institution": "National Technological University (UTN FRBA)",
+                    "degree": "Electronic Engineering",
+                    "period": "(2016-2019)",
+                    "description": "Up to 3rd Year – Knowledge in algebra and mathematical analysis, microcontroller programming in C and C++ (OOP), UART communication."
+                  },
+                  {
+                    "id": 2,
+                    "institution": "Computer Technician",
+                    "degree": "School No. 32 D.E. 14 “Gral. José De San Martin”",
+                    "period": "(2010 -2015)",
+                    "description": "Languages: C#, JAVA (OOP), and C. Database management with MySQL and drone development with Arduino."
+                  }
+                ],
+                "work_experience": [
+                  {
+                    "id": 1,
+                    "company": {
+                      "type": "Company",
+                      "name": "ADV Technology"
+                    },
+                    "sector": "Financial Software – BPO Services",
+                    "positions": [
+                      {
+                        "period": "(May 2023 - Present)",
+                        "brief": "Team Leader for BSF (Banco De Servicios Financieros de Carrefour)",
+                        "tasks": [
+                          "Monitoring developments and resolution of incidents for my team of developers.",
+                          "Daily Scrum with the team and meetings with functional teams of our client.",
+                          "Technical support to my team.",
+                          "Strengthening a positive work environment."
+                        ]
+                      },
+                      {
+                        "period": "(May 2022 - April 2023)",
+                        "brief": "FullStack Web Developer",
+                        "tasks": [
+                          "Development and resolution of incidents using technologies such as HTML, JS, and CSS in FrontEnd.",
+                          "C and PL/SQL Oracle in BackEnd. Use and development of WebService."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 2,
+                    "company": {
+                      "type": "Entrepreneurship",
+                      "name": "DevAds - Development & Advertising"
+                    },
+                    "sector": "Web Development and Online Advertising – SME",
+                    "positions": [
+                      {
+                        "period": "(2017 - 2022)",
+                        "brief": "Web Developer and Publicist",
+                        "tasks": [
+                          "Development and design of websites based on WordPress CMS, using HTML, CSS, and JS.",
+                          "Plugins in PHP and synchronization of posts with social networks.",
+                          "Creation and monitoring of campaigns in Google Ads and Meta Ads.",
+                          "Sales, self-promotion, and conventional and digital marketing."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 3,
+                    "company": {
+                      "type": "Entrepreneurship",
+                      "name": "ROOT Soluciones informáticas"
+                    },
+                    "sector": "Web Development and Technical Service",
+                    "positions": [
+                      {
+                        "period": "(2015 - 2017)",
+                        "brief": "IT Technician",
+                        "tasks": [
+                          "Development and design of websites based on WordPress CMS, using HTML, CSS, and JS.",
+                          "Technical service for PCs and installation of computer networks."
+                        ]
+                      }
+                    ]
+                  }
                 ]
               }
-            ]
-          },
-          {
-            "id": 2,
-            "empresa":  {
-              "tipo":"Emprendimiento",
-              "nombre":"DevAds - Development & Advertising"
-            },
-            "sector":     "Desarrollo Web y Publicidad Online – PyME",
-            "puestos":   [
-              {
-                "intervalo":"(2017 - 2022)",
-                "breve":"Desarrollador y Publicista Web",
-                "tareas":[
-                  "Desarrollo y diseño de sitios webs basados en CMS Wordpress, utilizando tecnologías HTML , CSS y JS . Plugins en PHP y sincronización de posteos con redes sociales.",
-                  "Creación y Monitorea de Campañas en Google Ads y Meta Ads",
-                  "Venta , autopromoción y marketing convencional y digital"
-                ]
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "empresa":  {
-              "tipo":"Emprendimiento",
-              "nombre":"ROOT Soluciones informáticas"
-            },
-            "sector":     "Desarrollo Web y Servicio Técnico",
-            "puestos":   [
-              {
-                "intervalo":"(2015 - 2017)",
-                "breve":"Técnico IT",
-                "tareas":[
-                  "Desarrollo y diseño de sitios webs basados en CMS Wordpress , utilizando tecnologías HTML , CSS y JS . Plugins en PH",
-                  "Servicio Técnico de PC e instalación de redes informáticas"
-                ]
-              }
-            ]
-          }
-        ]
-      }
+  
 
+
+}
