@@ -1,5 +1,5 @@
 {
-  "español":  { "info_general":
+  "espaniol":  { "info_general":
                 { 
                   "nombre":"Emmanuel Diego Carcomo",
                   "profesion":"Desarrollador Web FullStack Junior",
@@ -14,19 +14,19 @@
                 "proyectos": [
                   {
                     "id": 1,
-                    "title": "Participación – Proyecto Tarjeta Prepaga Carrefour – Lanzamiento Mayo 2023",
+                    "titulo": "Participación – Proyecto Tarjeta Prepaga Carrefour – Lanzamiento Mayo 2023",
                     "descrip":"Colaboré en el desarrollo diferentes funcionalidades para la gestión del nuevo producto de Tarjeta Prepaga a lanzar  por nuestro cliente Carrefour, Desarrollando el alta/baja de tarjeta como los ajustes de saldos y códigos de error de tarjetas proporcionados por  el procesador de pagos PRISMA.",
                     "tecnologias":"C / C++, PL SQL Oracle, HTML, CSS, JS"
                   },
                   {
                     "id": 2,
-                    "title": "Matriz LED controlada por WIFI desde GUI",
+                    "titulo": "Matriz LED controlada por WIFI desde GUI",
                     "descrip":"Trabajo Final – Materia Informática II – UTN FRBA –Trabajo Grupal 2 personas",
                     "tecnologias":"Programación de Drivers para microcontrolador LPC1769 en lenguaje C seteo de protocolos GPIO, comunicación  UART con módulo WiFi Esp8266, uso de punteros, memoria dinámica y diseño de máquina de estados. Desarrollo de GUI para control remoto de Matriz LED con lenguaje C++ y framework QT, conexión remota mediante Socket y conexión a API de  Hora y temperatura. Los cuales brindan datos que se visualizan en la matriz."
                   },
                   {
                     "id": 3,
-                    "title": "Pagina E-commerce FrontEnd & BanckEnd en React NodeJS and Nest Enviroment",
+                    "titulo": "Pagina E-commerce FrontEnd & BanckEnd en React NodeJS and Nest Enviroment",
                     "descrip":"Proyecto Personal",
                     "tecnologias":"Sitio Web con carrito de compras hecho con Framework React JS para FrontEnd. Nest Enviroment para el armado del BackEnd."
                   }
@@ -34,19 +34,19 @@
                 "conocimientos": {
                   "h_duras":  [ 
                                 {
-                                  "title":"Lenguajes",
+                                  "titulo":"Lenguajes",
                                   "texto":"C , C++ , React JS , JAVA , Python, MySQL ,PL/SQL Oracle"
                                 },
                                 {
-                                  "title":"Aplica en",
+                                  "titulo":"Aplica en",
                                   "texto":"Webs , Webservices , Android , Arduino"
                                 },
                                 {
-                                  "title":"O.S.",
+                                  "titulo":"O.S.",
                                   "texto":"Ubuntu Linux Terminal , Windows CMD"
                                 },
                                 {
-                                  "title":"Idiomas",
+                                  "titulo":"Idiomas",
                                   "texto":"Ingles Intermedio Pre-First (Speech & Listering)"
                                 }
                               ]
@@ -60,7 +60,7 @@
                                 "Ética laboral"
                               ]
                 },
-                "educacion_formal": [
+                "educacion": [
                   {
                     "id": 1,
                     "institucion":  "Universidad Tecnológica Nacional (UTN FRBA) ",
@@ -70,8 +70,8 @@
                   },
                   {
                     "id": 2,
-                    "institucion":"Técnico Informático ",
-                    "titulo":"Escuela N°32 D.E. 14 “Gral. José De San Martin",
+                    "institucion":"Escuela N°32 D.E. 14 “Gral. José De San Martin",
+                    "titulo":"Técnico Informático",
                     "intervalo":"(2010 -2015)",
                     "descripcion":"Lenguajes C#, JAVA (POO) y C. Manejo de Base de datos con MySQL y desarrollo de drone con Arduino"
                   }
@@ -201,7 +201,7 @@
                     "Work Ethic"
                   ]
                 },
-                "formal_education": [
+                "education": [
                   {
                     "id": 1,
                     "institution": "National Technological University (UTN FRBA)",
@@ -211,8 +211,8 @@
                   },
                   {
                     "id": 2,
-                    "institution": "Computer Technician",
-                    "degree": "School No. 32 D.E. 14 “Gral. José De San Martin”",
+                    "institution": "School No. 32 D.E. 14 “Gral. José De San Martin”",
+                    "degree": "Computer Technician",
                     "period": "(2010 -2015)",
                     "description": "Languages: C#, JAVA (OOP), and C. Database management with MySQL and drone development with Arduino."
                   }

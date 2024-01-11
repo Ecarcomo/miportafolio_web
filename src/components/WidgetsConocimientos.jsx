@@ -1,66 +1,51 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-
 import React from 'react'
-import useConocimientos from "../hooks/useConocimientos"
+import useInfoCV from "../hooks/useInfoCV"
 
 import Spinner from 'react-bootstrap/Spinner';
 
  const WidgetsConocimientos = ({mode,language}) => {
-  const {state , data} = useConocimientos();
+  const {state , data} = useInfoCV();
 
-  if(language=== "español"){
+  if(state==="success"){
+    const data_es = data.espaniol.conocimientos;
+    const data_en = data.english.skills;
+
+
     return (
       <Card border="primary" data-bs-theme={mode}>
-          <Card.Header as="h4">Conocimientos</Card.Header>
-          <Card.Body>
-          {state==="success"?
-            (
-              <>
+      <Card.Body>
+          {language === "espaniol"?(
+            <> 
                 <ListGroup className="list-group-flush">
                   <Card.Header as="h5">Habilidades Duras</Card.Header>
                   {
-                    data.h_duras.map((fila, index) => (
+                    data_es.h_duras.map((fila, index) => (
                       <ListGroup.Item key={index}>
-                            <Card.Title>{fila.title}</Card.Title>
+                            <Card.Title>{fila.titulo}</Card.Title>
                             <Card.Text>{fila.texto}</Card.Text>
                       </ListGroup.Item>
                     ))
                   }
                 </ListGroup>
                 <ListGroup className="list-group-flush">
-                  <Card.Header as="h5">Habilidades Duras</Card.Header>
+                  <Card.Header as="h5">Habilidades Blandas</Card.Header>
                   {
-                    data.h_blandas.map((fila, index) => (
+                    data_es.h_blandas.map((fila, index) => (
                       <ListGroup.Item key={index}>
                             <Card.Text>{fila}</Card.Text>
                       </ListGroup.Item>
                     ))
                   }
                 </ListGroup>
-              </>
-            )
-            :
-            (
-              <Card.Title><Spinner animation="grow" /></Card.Title>
-            )
-          }
-          </Card.Body>
-      </Card>
-    )
-  }
-  else{
-    return(
-      <Card border="primary" data-bs-theme={mode}>
-          <Card.Header as="h4">Skills</Card.Header>
-          <Card.Body>
-          {state==="success"?
-            (
-              <>
+            </>
+          ):(
+            <>
                 <ListGroup className="list-group-flush">
                   <Card.Header as="h5">Hard Skills</Card.Header>
                   {
-                    data.hard_skills.map((fila, index) => (
+                    data_en.hard_skills.map((fila, index) => (
                       <ListGroup.Item key={index}>
                             <Card.Title>{fila.title}</Card.Title>
                             <Card.Text>{fila.text}</Card.Text>
@@ -71,25 +56,28 @@ import Spinner from 'react-bootstrap/Spinner';
                 <ListGroup className="list-group-flush">
                   <Card.Header as="h5">Soft Skills</Card.Header>
                   {
-                    data.soft_skills.map((fila, index) => (
+                    data_en.soft_skills.map((fila, index) => (
                       <ListGroup.Item key={index}>
                             <Card.Text>{fila}</Card.Text>
                       </ListGroup.Item>
                     ))
                   }
                 </ListGroup>
-              </>
-            )
-            :
-            (
-              <Card.Title><Spinner animation="grow" /></Card.Title>
-            )
-          }
-          </Card.Body>
-      </Card>
-    )
-  }
+            </>
+          )}
+      </Card.Body>
+  </Card>
+  )
 
+}
+
+return (
+  <Card border="primary" data-bs-theme={mode}>
+      <Card.Body>
+          <Card.Title><Spinner animation="grow" /></Card.Title>
+      </Card.Body>
+  </Card>
+)
 };
 
 export default WidgetsConocimientos;

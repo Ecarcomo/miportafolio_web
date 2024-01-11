@@ -1,25 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { getConocimientos } from "../helpers/getters";
+import { getInfoCV } from "../helpers/getters";
 
 const initialState = {
         state: "loading",
         data: []
 }
 
-const conocimientosSlice = createSlice({
+const infoCVSlice = createSlice({
   name: '@conocimientos',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-        builder.addCase(getConocimientos.pending,(state) => {
+        builder.addCase(getInfoCV.pending,(state) => {
             state.state = "loading"
             state.data = [];
         })
-        builder.addCase(getConocimientos.fulfilled,(state,action) => {
+        builder.addCase(getInfoCV.fulfilled,(state,action) => {
             state.state = "success"
             state.data = action.payload;
         })
-        builder.addCase(getConocimientos.rejected,(state,action) => {
+        builder.addCase(getInfoCV.rejected,(state,action) => {
             state.state = "failed"
             console.log(action.payload)
             state.data = [];
@@ -27,6 +27,6 @@ const conocimientosSlice = createSlice({
       },
 });
 
-//export const {} = conocimientosSlice.actions
+//export const {} = infoCVSlice.actions
 
-export default conocimientosSlice.reducer
+export default infoCVSlice.reducer

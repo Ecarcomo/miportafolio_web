@@ -7,11 +7,11 @@ import useConfig from "../hooks/useConfig";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const WithNavbar = ({language}) => {
-  const {handleToggleMode ,handleToggleLanguage, mode , bg_color} = useConfig();
+const WithNavbar = () => {
+  const {handleToggleMode ,handleToggleLanguage, mode , bg_color,language} = useConfig();
   return (
     <>
-      <Navbar sticky="top" data-bs-theme={mode} className="bg-body-tertiary">
+      <Navbar sticky="top" data-bs-theme={mode} className="bg-body-tertiary border border-danger">
           <Container >
           <Row style={{"width":"inherit"}}>
             <Col md={4} lg={4} style={{"width":"min-content"}}>
@@ -23,7 +23,11 @@ const WithNavbar = ({language}) => {
                   height="30"
                   className="d-inline-block align-top"
                 />{' '}
-                Portafolio - Emmanuel Diego Carcomo
+                {language === "espaniol"?(
+                  <>Portafolio - Emmanuel Diego Carcomo</> 
+                ):(
+                  <>Portfolio - Emmanuel Diego Carcomo</> 
+                )}
               </Navbar.Brand>
             </Col>
             <Col md={4} lg={6} >
@@ -51,10 +55,16 @@ const WithNavbar = ({language}) => {
           </Container>
         </Navbar>
         <Outlet/>
-      <Navbar data-bs-theme={mode} sticky="bottom" className="bg-body-tertiary">
+      <Navbar data-bs-theme={mode} sticky="bottom" className="bg-body-tertiary border border-danger">
         <Container>
+        
+        {language === "espaniol"?(
           <h5 style={{"color":(bg_color ==="white"?"black":"white")}}>Sitio Web Desarrollado Bajo ReactJS y Boostrap</h5>
-        </Container>
+        ):(
+          <h5 style={{"color":(bg_color ==="white"?"black":"white")}}>Website Developed Under React JS and Bootstrap</h5>
+        )}
+        
+          </Container>
       </Navbar>
     </>
   )

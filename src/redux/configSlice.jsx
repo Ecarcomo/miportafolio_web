@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
         mode: "light",
         bg_color:"white",
-        language:"español"
+        language:"espaniol"
 }
 
 const configSlice = createSlice({
@@ -16,7 +16,7 @@ const configSlice = createSlice({
         state.bg_color ==="white"? state.bg_color ="black": state.bg_color ="white";
     },
     toggleLanguage: (state) => {
-      state.language ==="español"? state.language ="english": state.language ="español";
+      state.language ==="espaniol"? state.language ="english": state.language ="espaniol";
     }
   },
 });
