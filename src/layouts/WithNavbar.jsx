@@ -27,7 +27,13 @@ const WithNavbar = () => {
                 )}
           </div>
           <div className="d-inline-flex">
-              <Button variant="danger">PDF CV</Button>
+            <Button 
+              href={'../attachments/EmmanuelCarcomo-cv.pdf'}
+              download="Resume-PDF-document"
+              target="_blank"
+              rel="noreferrer"
+              variant="danger"
+              className="align-self-center"> PDF CV</Button>
                 <Form className='mx-2'>
                   <Form.Check
                       type="switch"
