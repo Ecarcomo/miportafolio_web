@@ -9,9 +9,10 @@ import Nav from 'react-bootstrap/Nav';
 const WithNavbar = () => {
   const {handleToggleMode ,handleToggleLanguage, mode , bg_color,language} = useConfig();
   return (
-    <><Container fluid='xl' >
+    <>
       <Navbar sticky="top" data-bs-theme={mode} className="bg-body-tertiary border border-danger">
-          <div>
+      <Container fluid='xl' className="d-flex flex-column flex-sm-row">
+          <div style={{"color": (bg_color ==="white"?"black":"white")}} className='mb-2 mb-sm-0'>
                 <img
                   alt=""
                   src="../img/logo.svg"
@@ -20,12 +21,12 @@ const WithNavbar = () => {
                   className="d-inline-block align-top"
                 />{'   '}
                 {language === "espaniol"?(
-                  <>CV - Emmanuel Diego Carcomo</>
+                  <strong>CV - Emmanuel Diego Carcomo</strong>
                 ):(
-                  <>Resume - Emmanuel Diego Carcomo</>
+                  <strong>Resume - Emmanuel Diego Carcomo</strong>
                 )}
           </div>
-          <div>
+          <div className="d-inline-flex">
               <Button variant="danger">PDF CV</Button>
                 <Form>
                   <Form.Check
@@ -44,8 +45,9 @@ const WithNavbar = () => {
                   />
                 </Form>
           </div>
+          </Container>
         </Navbar>
-        </Container>
+        
         <Outlet/>
       <Navbar data-bs-theme={mode} sticky="bottom" className="bg-body-tertiary border border-danger">
         <Container>
