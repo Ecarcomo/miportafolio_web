@@ -12,11 +12,13 @@ const WithNavbar = () => {
   return (
     <>
       <Navbar sticky="top" data-bs-theme={mode} className="bg-body-tertiary border border-danger">
-          <Container >
+          <Container fluid='xl' 
+           lg='12'
+           md='12'>
           <Row style={{"width":"inherit"}}>
             <Col md={4} lg={4} style={{"width":"min-content"}}>
               <Navbar.Brand href="#home" 
-               style={{"display":"flex","grid-gap":"20px"}}>
+               style={{"display":"flex","grid-gap":"10px"}}>
                 <img
                   alt=""
                   src="../img/logo.svg"
