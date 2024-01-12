@@ -28,7 +28,7 @@ const WithNavbar = () => {
           </div>
           <div className="d-inline-flex">
               <Button variant="danger">PDF CV</Button>
-                <Form>
+                <Form className='mx-2'>
                   <Form.Check
                       type="switch"
                       label="English/Español"
