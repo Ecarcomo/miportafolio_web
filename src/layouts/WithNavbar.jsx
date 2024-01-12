@@ -15,18 +15,19 @@ const WithNavbar = () => {
           <Container >
           <Row style={{"width":"inherit"}}>
             <Col md={4} lg={4} style={{"width":"min-content"}}>
-              <Navbar.Brand href="#home" >
+              <Navbar.Brand href="#home" 
+               style={{"display":"flex","grid-gap":"20px"}}>
                 <img
                   alt=""
                   src="../img/logo.svg"
                   width="30"
                   height="30"
                   className="d-inline-block align-top"
-                />{' '}
+                />
                 {language === "espaniol"?(
-                  <>Portafolio - Emmanuel Diego Carcomo</> 
+                  <p><strong>Portafolio - Emmanuel Diego Carcomo</strong></p> 
                 ):(
-                  <>Portfolio - Emmanuel Diego Carcomo</> 
+                  <p><strong>Portfolio - Emmanuel Diego Carcomo</strong></p>  
                 )}
               </Navbar.Brand>
             </Col>
