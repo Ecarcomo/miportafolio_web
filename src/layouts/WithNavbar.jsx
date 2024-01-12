@@ -4,38 +4,29 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import useConfig from "../hooks/useConfig";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
 
 const WithNavbar = () => {
   const {handleToggleMode ,handleToggleLanguage, mode , bg_color,language} = useConfig();
   return (
-    <>
+    <><Container fluid='xl' >
       <Navbar sticky="top" data-bs-theme={mode} className="bg-body-tertiary border border-danger">
-          <Container fluid='xl' 
-           lg='12'
-           md='12'>
-          <Row style={{"width":"inherit"}}>
-            <Col md={4} lg={4} style={{"width":"min-content"}}>
-              <Navbar.Brand href="#home" 
-               style={{"display":"flex","grid-gap":"10px"}}>
+          <div>
                 <img
                   alt=""
                   src="../img/logo.svg"
                   width="30"
                   height="30"
                   className="d-inline-block align-top"
-                />
+                />{'   '}
                 {language === "espaniol"?(
-                  <p><strong>Portafolio - Emmanuel Diego Carcomo</strong></p> 
+                  <>CV - Emmanuel Diego Carcomo</>
                 ):(
-                  <p><strong>Portfolio - Emmanuel Diego Carcomo</strong></p>  
+                  <>Resume - Emmanuel Diego Carcomo</>
                 )}
-              </Navbar.Brand>
-            </Col>
-            <Col md={4} lg={6} >
-            <Navbar.Collapse className="justify-content-between">
-                <Button variant="danger">PDF CV</Button>
+          </div>
+          <div>
+              <Button variant="danger">PDF CV</Button>
                 <Form>
                   <Form.Check
                       type="switch"
@@ -52,11 +43,9 @@ const WithNavbar = () => {
                     style={{"color": (bg_color ==="white"?"black":"white")}}
                   />
                 </Form>
-              </Navbar.Collapse>
-            </Col>
-          </Row>   
-          </Container>
+          </div>
         </Navbar>
+        </Container>
         <Outlet/>
       <Navbar data-bs-theme={mode} sticky="bottom" className="bg-body-tertiary border border-danger">
         <Container>
