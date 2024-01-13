@@ -27,7 +27,11 @@ const WithNavbar = () => {
           </div>
           <div className="d-inline-flex">
             <Button 
-              href={'../attachments/EmmanuelCarcomo-cv_es.pdf'}
+              href={language === "espaniol"?(
+                '../attachments/EmmanuelCarcomo-cv_es.pdf'
+                ):(
+                '../attachments/EmmanuelCarcomo-cv_en.pdf'
+                )}
               download="Resume-PDF-document"
               target="_blank"
               rel="noreferrer"
@@ -36,14 +40,14 @@ const WithNavbar = () => {
                 <Form className='mx-2'>
                   <Form.Check
                       type="switch"
-                      label="English/Español"
+                      label="Español/English"
                       id="disabled-custom-switch"
                       onClick={handleToggleLanguage}
                       style={{"color": (bg_color ==="white"?"black":"white")}}
                     />
                   <Form.Check
                     type="switch"
-                    label="Dark Mode"
+                    label={(mode ==="dark"?"Dark Mode":"Light Mode")}
                     id="disabled-custom-switch"
                     onClick={handleToggleMode}
                     style={{"color": (bg_color ==="white"?"black":"white")}}
