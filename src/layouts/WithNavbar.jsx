@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import useConfig from "../hooks/useConfig";
-import Nav from 'react-bootstrap/Nav';
 
 const WithNavbar = () => {
   const {handleToggleMode ,handleToggleLanguage, mode , bg_color,language} = useConfig();
@@ -28,7 +27,7 @@ const WithNavbar = () => {
           </div>
           <div className="d-inline-flex">
             <Button 
-              href={'../attachments/EmmanuelCarcomo-cv.pdf'}
+              href={'../attachments/EmmanuelCarcomo-cv_es.pdf'}
               download="Resume-PDF-document"
               target="_blank"
               rel="noreferrer"

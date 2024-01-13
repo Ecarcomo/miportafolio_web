@@ -34,12 +34,12 @@
                 "conocimientos": {
                   "h_duras":  [ 
                                 {
-                                  "titulo":"Lenguajes",
+                                  "titulo":"Lenguajes de programación",
                                   "texto":"C , C++ , React JS , JAVA , Python, MySQL ,PL/SQL Oracle"
                                 },
                                 {
                                   "titulo":"Aplica en",
-                                  "texto":"Webs , Webservices , Android , Arduino"
+                                  "texto":"Webs , Webservices , Android , Arduino, PIC's"
                                 },
                                 {
                                   "titulo":"O.S.",
@@ -176,12 +176,12 @@
                 "skills": {
                   "hard_skills": [
                     {
-                      "title": "Languages",
+                      "title": "Programming languages",
                       "text": "C, C++, React JS, JAVA, Python, MySQL, PL/SQL Oracle"
                     },
                     {
                       "title": "Applies to",
-                      "text": "Websites, Web services, Android, Arduino"
+                      "text": "Websites, Web services, Android, Arduino, PIC's"
                     },
                     {
                       "title": "Operating Systems",
