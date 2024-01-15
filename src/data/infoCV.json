@@ -2,7 +2,7 @@
   "espaniol":  { "info_general":
                 { 
                   "nombre":"Emmanuel Diego Carcomo",
-                  "profesion":"Desarrollador Web FullStack Junior",
+                  "profesion":"Desarrollador Web FullStack Ssr.",
                   "Lugar":"CABA , Buenos Aires",
                   "fecha_nacimiento":"01/01/1997",
                   "num_tel":"+54 9 11 3765 8523",
@@ -144,7 +144,7 @@
               },
   "english": {    "general_info": {
                   "name": "Emmanuel Diego Carcomo",
-                  "profession": "Junior FullStack Web Developer",
+                  "profession": "FullStack Web Developer Ssr.",
                   "location": "CABA, Buenos Aires",
                   "birthdate": "01/01/1997",
                   "phone_number": "+54 9 11 3765 8523",
