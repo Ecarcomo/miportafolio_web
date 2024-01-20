@@ -10,6 +10,15 @@ import Col from 'react-bootstrap/Col';
 
 import Spinner from 'react-bootstrap/Spinner';
 
+/**
+ * Seccion de visualizacion sobre la Información personal
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //Telefono , Email, foto de perfil, Edad
+ * //Carta de presentacion
+ * @returns  {HeaderInfoGeneral} HeaderInfoGeneral
+ */
 const HeaderInfoGeneral = ({mode,language}) => {
     const {state , data} = useInfoCV();
 

@@ -5,6 +5,13 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import useConfig from "../hooks/useConfig";
 
+/**
+ * Componente de renderizado de Header y Footer de la App
+ * @since v1.0
+ * @author @emmanuel_carcomo <emmanuelcarcomo@gmail.com> 
+ * @description Inicializando la configuracion del componente, contienen un panel de control dinàmico, capaz de cambiar el idioma y el modo de la app. Ademas segùn el idioma elegido ,el PDF se descarga en ese idioma
+ * @return    {WithNavbar} Componente
+ */
 const WithNavbar = () => {
   const {handleToggleMode ,handleToggleLanguage, mode , bg_color,language} = useConfig();
   return (

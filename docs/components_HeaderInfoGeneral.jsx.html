@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/HeaderInfoGeneral.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#HeaderInfoGeneral">HeaderInfoGeneral</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Navigation">Navigation</a></li><li><a href="global.html#WithNavbar">WithNavbar</a></li><li><a href="global.html#getInfoCV">getInfoCV</a></li><li><a href="global.html#root">root</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/HeaderInfoGeneral.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import useInfoCV from "../hooks/useInfoCV"
+import { Link } from 'react-router-dom';
+
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Image from 'react-bootstrap/Image';
+import Col from 'react-bootstrap/Col';
+
+import Spinner from 'react-bootstrap/Spinner';
+
+/**
+ * Seccion de visualizacion sobre la Información personal
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //Telefono , Email, foto de perfil, Edad
+ * //Carta de presentacion
+ * @returns  {HeaderInfoGeneral} HeaderInfoGeneral
+ */
+const HeaderInfoGeneral = ({mode,language}) => {
+    const {state , data} = useInfoCV();
+
+    if(state==="success"){
+        const data_es = data.espaniol.info_general;
+        const data_en = data.english.general_info;
+
+
+        return (
+            &lt;Card border="primary" data-bs-theme={mode}>
+            &lt;Card.Body>
+              &lt;Container >
+                {language === "espaniol"?(
+                    &lt;Row   className='gy-3'  style={{"alignItems": "center"}}>
+                        &lt;Col style={{"textAlign": "center"}}>
+                            &lt;Image className='imgProfile' src={data_es.img_src}   />
+                        &lt;/Col>
+                        &lt;Col > 
+                            &lt;h4>&lt;strong>{data_es.nombre}&lt;/strong>&lt;/h4>
+                            &lt;p>&lt;strong>{data_es.profesion}&lt;/strong>&lt;/p>
+                            &lt;cite>{data_es.Lugar} / Nacimiento: {data_es.fecha_nacimiento}&lt;/cite>
+                        &lt;/Col>
+                        &lt;Col >
+                            &lt;small>Telefono:    {data_es.num_tel}&lt;/small>
+                            &lt;br>&lt;/br>
+                            &lt;small>Email:   {data_es.email}&lt;/small>
+                            &lt;hr>&lt;/hr>
+                            &lt;small>&lt;Link target="_blank" to={"https://"+data_es.link_github} >{data_es.link_github}&lt;/Link>&lt;/small>
+                            &lt;br>&lt;/br>
+                            &lt;small>&lt;Link target="_blank" to={"https://"+data_es.link_linkedin} >{data_es.link_linkedin}&lt;/Link>&lt;/small>
+                        &lt;/Col>
+                    &lt;/Row>
+                ):(
+                    &lt;Row   className='gy-3'  style={{"alignItems": "center"}}>
+                        &lt;Col style={{"textAlign": "center"}}>
+                            &lt;Image className='imgProfile' src={data_en.img_src}   />
+                        &lt;/Col>
+                        &lt;Col > 
+                            &lt;h4>&lt;strong>{data_en.name}&lt;/strong>&lt;/h4>
+                            &lt;p>&lt;strong>{data_en.profession}&lt;/strong>&lt;/p>
+                            &lt;cite>{data_en.location} / Birth Date: {data_en.birthdate}&lt;/cite>
+                        &lt;/Col>
+                        &lt;Col >
+                            &lt;small>Phone Number:    {data_en.phone_number}&lt;/small>
+                            &lt;br>&lt;/br>
+                            &lt;small>Email:   {data_en.email}&lt;/small>
+                            &lt;hr>&lt;/hr>
+                            &lt;small>&lt;Link target="_blank" to={"https://"+data_en.github_link} >{data_en.github_link}&lt;/Link>&lt;/small>
+                            &lt;br>&lt;/br>
+                            &lt;small>&lt;Link target="_blank" to={"https://"+data_en.linkedin_link} >{data_en.linkedin_link}&lt;/Link>&lt;/small>
+                        &lt;/Col>
+                    &lt;/Row>
+                )}
+                &lt;/Container>
+            &lt;/Card.Body>
+        &lt;/Card>
+        )
+
+    }
+
+    return (
+        &lt;Card border="primary" data-bs-theme={mode}>
+            &lt;Card.Body>
+                &lt;Card.Title>&lt;Spinner animation="grow" />&lt;/Card.Title>
+            &lt;/Card.Body>
+        &lt;/Card>
+    )
+
+}
+
+export default HeaderInfoGeneral
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Sat Jan 20 2024 15:56:40 GMT-0300 (hora estándar de Argentina) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

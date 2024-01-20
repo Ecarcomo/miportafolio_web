@@ -8,7 +8,13 @@ import WidgetsEducacion from "../components/WidgetsEducacion"
 import WidgetsExpLaboral from "../components/WidgetsExpLaboral"
 import HeaderInfoGeneral from "../components/HeaderInfoGeneral"
 
-
+/**
+ * Vista principal de App en donde se invocan todos los componentes de cada categorìa del curriculum
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} bg_color variable global REDUX para color de letra 
+ * @param {string} language variable global REDUX de idioma 
+ * @returns  {Home} Home
+ */
 const Home = ({mode,bg_color,language}) => {
         return (
         <div style={{"backgroundColor":bg_color}}>

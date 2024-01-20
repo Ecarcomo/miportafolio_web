@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Resume Online - React JS App
+Resume online under React JS , Bootstrapt technologies.
+Responsive Desing , Dark/Light Mode and English/Spanish language
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
