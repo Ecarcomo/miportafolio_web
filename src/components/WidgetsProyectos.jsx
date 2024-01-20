@@ -8,6 +8,14 @@ import useInfoCV from "../hooks/useInfoCV"
 import Spinner from 'react-bootstrap/Spinner';
 import Modal from 'react-bootstrap/Modal';
 
+/**
+ * @desc Seccion de visualizacion sobres proyectos destacables
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //nombres, descripciomes y tecnologias utilizadas en proyectos realizados
+ * @returns  {WidgetsProyectos} WidgetsProyectos
+ */
  const WidgetsProyectos = ({mode,language}) => {
   const {state , data} = useInfoCV();
   const [modalShow, setModalShow] = React.useState(false);

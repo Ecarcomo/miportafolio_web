@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/WidgetsProyectos.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#HeaderInfoGeneral">HeaderInfoGeneral</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Navigation">Navigation</a></li><li><a href="global.html#WidgetsConocimientos">WidgetsConocimientos</a></li><li><a href="global.html#WidgetsEducacion">WidgetsEducacion</a></li><li><a href="global.html#WidgetsExpLaboral">WidgetsExpLaboral</a></li><li><a href="global.html#WidgetsProyectos">WidgetsProyectos</a></li><li><a href="global.html#WithNavbar">WithNavbar</a></li><li><a href="global.html#getInfoCV">getInfoCV</a></li><li><a href="global.html#root">root</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/WidgetsProyectos.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+
+import React from 'react'
+import useInfoCV from "../hooks/useInfoCV"
+import Spinner from 'react-bootstrap/Spinner';
+import Modal from 'react-bootstrap/Modal';
+
+/**
+ * @desc Seccion de visualizacion sobres proyectos destacables
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //nombres, descripciomes y tecnologias utilizadas en proyectos realizados
+ * @returns  {WidgetsProyectos} WidgetsProyectos
+ */
+ const WidgetsProyectos = ({mode,language}) => {
+  const {state , data} = useInfoCV();
+  const [modalShow, setModalShow] = React.useState(false);
+  const [modalData, setModalData] = React.useState([]);
+
+  if(state==="success"){
+    const data_es = data.espaniol.proyectos;
+    const data_en = data.english.projects;
+
+    const HandleModal = (f) =>{
+      setModalData(f);
+      setModalShow(true);
+    }
+    
+    return (
+      &lt;>
+        &lt;Card border="primary" data-bs-theme={mode}>
+        {language === "espaniol"?(
+          &lt;Card.Header as="h4">Proyectos&lt;/Card.Header>
+        ):(
+          &lt;Card.Header as="h4">Projects&lt;/Card.Header>
+        )}
+        
+        &lt;Card.Body>
+            {language === "espaniol"?(
+              &lt;ListGroup className="list-group-flush">
+              {
+                data_es.map((fila, index) => (
+                    &lt;ListGroup.Item  key={index}> 
+                      &lt;Card.Title>{fila.titulo}&lt;/Card.Title>
+                      &lt;Card.Text>{fila.descrip.substring(0, 100)+"..."}&lt;/Card.Text>
+                      &lt;footer className="blockquote-footer">
+                      &lt;cite>{fila.tecnologias.substring(0, 50)+"..."}&lt;/cite>
+                       &lt;/footer>
+                      &lt;Button variant="info" onClick={() => HandleModal(fila)}>Ver Mas..&lt;/Button>
+                    &lt;/ListGroup.Item>
+                ))
+              }
+            &lt;/ListGroup>
+            ):(
+              &lt;ListGroup className="list-group-flush">
+              {
+                data_en.map((fila, index) => (
+                    &lt;ListGroup.Item  key={index}> 
+                      &lt;Card.Title>{fila.title}&lt;/Card.Title>
+                      &lt;Card.Text>{fila.description.substring(0, 100)+"..."}&lt;/Card.Text>
+                      &lt;footer className="blockquote-footer">
+                      &lt;cite>{fila.technologies.substring(0, 50)+"..."}&lt;/cite>
+                       &lt;/footer>
+                      &lt;Button variant="info"  onClick={() => HandleModal(fila)}>See More..&lt;/Button>
+                    &lt;/ListGroup.Item>
+                ))
+              }
+            &lt;/ListGroup>
+            )}
+        &lt;/Card.Body>
+    &lt;/Card>
+    &lt;MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        data={modalData}
+        language={language}
+        mode={mode}
+      />
+    &lt;/>
+    )
+
+}
+
+return (
+    &lt;Card border="primary" data-bs-theme={mode}>
+        &lt;Card.Body>
+            &lt;Card.Title>&lt;Spinner animation="grow" />&lt;/Card.Title>
+        &lt;/Card.Body>
+    &lt;/Card>
+)
+  
+};
+
+export default WidgetsProyectos;
+
+
+
+//---------Modal para ampliacion de contenido del proyecto
+function MyVerticallyCenteredModal(props) {
+  const _data = props.data;
+  return (
+    &lt;Modal
+      {...props}
+      data-bs-theme={props.mode}
+      size="xl"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+    &lt;div className={(props.mode=== 'dark'?('special_modal'):(''))}>
+    {props.language === "espaniol"?(
+      &lt;>
+        &lt;Modal.Header closeButton >
+          &lt;Modal.Title id="contained-modal-title-vcenter">
+            {_data.titulo}
+          &lt;/Modal.Title>
+        &lt;/Modal.Header>
+        &lt;Modal.Body>
+          &lt;h4>Breve descripción:&lt;/h4>
+          &lt;p>
+          {_data.descrip}
+          &lt;/p>
+          &lt;h4>Tecnologías utilizadas:&lt;/h4>
+          &lt;p>
+          {_data.tecnologias}
+          &lt;/p>
+        &lt;/Modal.Body>
+        &lt;Modal.Footer>
+          &lt;Button onClick={props.onHide}>Close&lt;/Button>
+        &lt;/Modal.Footer>
+      &lt;/>
+    ):(
+      &lt;>
+        &lt;Modal.Header closeButton>
+          &lt;Modal.Title id="contained-modal-title-vcenter">
+          {_data.title}
+          &lt;/Modal.Title>
+        &lt;/Modal.Header>
+        &lt;Modal.Body>
+          &lt;h4>Brief:&lt;/h4>
+          &lt;p>
+          {_data.description}
+          &lt;/p>
+          &lt;h4>Technologies:&lt;/h4>
+          &lt;p>
+          {_data.technologies}
+          &lt;/p>
+        &lt;/Modal.Body>
+        &lt;Modal.Footer>
+          &lt;Button onClick={props.onHide}>Close&lt;/Button>
+        &lt;/Modal.Footer>
+      &lt;/>
+    )}
+    &lt;/div>
+    &lt;/Modal>
+  );
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Sat Jan 20 2024 17:04:43 GMT-0300 (hora estándar de Argentina) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
