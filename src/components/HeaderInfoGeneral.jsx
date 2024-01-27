@@ -32,6 +32,7 @@ const HeaderInfoGeneral = ({mode,language}) => {
             <Card.Body>
               <Container >
                 {language === "espaniol"?(
+                    <>
                     <Row   className='gy-3'  style={{"alignItems": "center"}}>
                         <Col style={{"textAlign": "center"}}>
                             <Image className='imgProfile' src={data_es.img_src}   />
@@ -51,7 +52,20 @@ const HeaderInfoGeneral = ({mode,language}) => {
                             <small><Link target="_blank" to={"https://"+data_es.link_linkedin} >{data_es.link_linkedin}</Link></small>
                         </Col>
                     </Row>
+                    <Row  style={{"alignItems": "center","marginTop":"10px"}}>
+                        <Col style={{"textAlign": "center"}}>
+                        <cite>
+                        {
+                            data_es.presentacion.split('\n').map((linea, index) => (
+                                <p key={index}>{linea}</p>
+                            ))
+                        }
+                        </cite>
+                        </Col>
+                    </Row>
+                    </>
                 ):(
+                    <>
                     <Row   className='gy-3'  style={{"alignItems": "center"}}>
                         <Col style={{"textAlign": "center"}}>
                             <Image className='imgProfile' src={data_en.img_src}   />
@@ -71,6 +85,18 @@ const HeaderInfoGeneral = ({mode,language}) => {
                             <small><Link target="_blank" to={"https://"+data_en.linkedin_link} >{data_en.linkedin_link}</Link></small>
                         </Col>
                     </Row>
+                    <Row  style={{"alignItems": "center","marginTop":"10px"}}>
+                        <Col style={{"textAlign": "center"}}>
+                        <cite>
+                        {
+                            data_en.presentation.split('\n').map((line, index) => (
+                                <p key={index}>{line}</p>
+                            ))
+                        }
+                        </cite>
+                        </Col>
+                    </Row>
+                    </>
                 )}
                 </Container>
             </Card.Body>

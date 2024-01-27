@@ -17,7 +17,7 @@ const Navigation = ({mode,bg_color,language}) => {
                     <Route path="/" element={<WithNavbar language={language}/>}>
                       <Route index element={<Home  mode={mode} bg_color={bg_color} language={language}/>} />
                     </Route>
-/** En caso de ruteo erroneo , la app redirecciona a la pagina principal */
+                    {/** En caso de ruteo erroneo , la app redirecciona a la pagina principal */}
                     <Route path="*" element={<Navigate to="/" />} />
                   </Routes>
                 </BrowserRouter>

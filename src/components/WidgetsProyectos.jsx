@@ -118,7 +118,19 @@ function MyVerticallyCenteredModal(props) {
             {_data.titulo}
           </Modal.Title>
         </Modal.Header>
+
         <Modal.Body>
+        <center>
+        {
+          _data.img!=="" && <img src={_data.img} width={'50%'} alt={_data.titulo}></img>
+        }
+        {
+          _data.vid!=="" && <video  width="640" height="360" controls>
+                                <source src={ _data.vid} type="video/mp4" />
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+        }
+        </center>
           <h4>Breve descripción:</h4>
           <p>
           {_data.descrip}
@@ -140,6 +152,17 @@ function MyVerticallyCenteredModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+        <center>
+        {
+          _data.img!=="" && <img src={_data.img} width={'50%'} alt={_data.titulo}></img>
+        }
+        {
+          _data.vid!=="" && <video  width="640" height="360" controls>
+                                <source src={ _data.vid} type="video/mp4" />
+                                Your browser not support this video element.
+                            </video>
+        }
+        </center>
           <h4>Brief:</h4>
           <p>
           {_data.description}
