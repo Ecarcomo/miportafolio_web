@@ -154,7 +154,7 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Body>
         <center>
         {
-          _data.img!=="" && <img src={_data.img} width={'50%'} alt={_data.titulo}></img>
+          _data.img!=="" && <img src={_data.img} width={'50%'} alt={_data.title}></img>
         }
         {
           _data.vid!=="" && <video  width="640" height="360" controls>
