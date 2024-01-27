@@ -1,8 +1,17 @@
+
 import './App.css';
-import Navigation from "./routes/navigation"
-import useConfig from "./hooks/useConfig"
 import "./estilos/style.css"
 
+import Navigation from "./routes/navigation"
+import useConfig from "./hooks/useConfig"
+
+
+/**
+ * @since v1.0
+ * @author @emmanuel_carcomo <emmanuelcarcomo@gmail.com> 
+ * @return  {Navigation}  Componente de ruteo
+ * @description Inicializacion de configuracion y ruteo de APP
+ */
 function App() {
   const {mode,bg_color,language} = useConfig();
   return (

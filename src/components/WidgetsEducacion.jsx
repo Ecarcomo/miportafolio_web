@@ -6,6 +6,14 @@ import React from 'react'
 import useInfoCV from "../hooks/useInfoCV"
 import Spinner from 'react-bootstrap/Spinner';
 
+/**
+ * @desc Seccion de visualizacion sobre la Información Educativa
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //Instituciones , carrera , periodos y conocimientos adquiridos destacables
+ * @returns  {WidgetsEducacion} WidgetsEducacion
+ */
  const WidgetsEducacion = ({mode,language}) => {
   const {state , data} = useInfoCV();
 

@@ -6,6 +6,14 @@ import React from 'react'
 import useInfoCV from "../hooks/useInfoCV"
 import Spinner from 'react-bootstrap/Spinner';
 
+/**
+ * @desc Seccion de visualizacion sobre la Información Laboral
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //Empresas , periodos, puestos y tareas que se realizaron
+ * @returns  {WidgetsExpLaboral} WidgetsExpLaboral
+ */
  const WidgetsExpLaboral = ({mode,language}) => {
   const {state , data} = useInfoCV();
 

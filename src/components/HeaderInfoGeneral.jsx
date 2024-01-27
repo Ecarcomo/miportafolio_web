@@ -10,6 +10,15 @@ import Col from 'react-bootstrap/Col';
 
 import Spinner from 'react-bootstrap/Spinner';
 
+/**
+ * Seccion de visualizacion sobre la Información personal
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //Telefono , Email, foto de perfil, Edad
+ * //Carta de presentacion
+ * @returns  {HeaderInfoGeneral} HeaderInfoGeneral
+ */
 const HeaderInfoGeneral = ({mode,language}) => {
     const {state , data} = useInfoCV();
 
@@ -23,6 +32,7 @@ const HeaderInfoGeneral = ({mode,language}) => {
             <Card.Body>
               <Container >
                 {language === "espaniol"?(
+                    <>
                     <Row   className='gy-3'  style={{"alignItems": "center"}}>
                         <Col style={{"textAlign": "center"}}>
                             <Image className='imgProfile' src={data_es.img_src}   />
@@ -42,7 +52,20 @@ const HeaderInfoGeneral = ({mode,language}) => {
                             <small><Link target="_blank" to={"https://"+data_es.link_linkedin} >{data_es.link_linkedin}</Link></small>
                         </Col>
                     </Row>
+                    <Row  style={{"alignItems": "center","marginTop":"10px"}}>
+                        <Col style={{"textAlign": "center"}}>
+                        <cite>
+                        {
+                            data_es.presentacion.split('\n').map((linea, index) => (
+                                <p key={index}>{linea}</p>
+                            ))
+                        }
+                        </cite>
+                        </Col>
+                    </Row>
+                    </>
                 ):(
+                    <>
                     <Row   className='gy-3'  style={{"alignItems": "center"}}>
                         <Col style={{"textAlign": "center"}}>
                             <Image className='imgProfile' src={data_en.img_src}   />
@@ -62,6 +85,18 @@ const HeaderInfoGeneral = ({mode,language}) => {
                             <small><Link target="_blank" to={"https://"+data_en.linkedin_link} >{data_en.linkedin_link}</Link></small>
                         </Col>
                     </Row>
+                    <Row  style={{"alignItems": "center","marginTop":"10px"}}>
+                        <Col style={{"textAlign": "center"}}>
+                        <cite>
+                        {
+                            data_en.presentation.split('\n').map((line, index) => (
+                                <p key={index}>{line}</p>
+                            ))
+                        }
+                        </cite>
+                        </Col>
+                    </Row>
+                    </>
                 )}
                 </Container>
             </Card.Body>

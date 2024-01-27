@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>layouts/WithNavbar.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#HeaderInfoGeneral">HeaderInfoGeneral</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Navigation">Navigation</a></li><li><a href="global.html#WidgetsConocimientos">WidgetsConocimientos</a></li><li><a href="global.html#WidgetsEducacion">WidgetsEducacion</a></li><li><a href="global.html#WidgetsExpLaboral">WidgetsExpLaboral</a></li><li><a href="global.html#WidgetsProyectos">WidgetsProyectos</a></li><li><a href="global.html#WithNavbar">WithNavbar</a></li><li><a href="global.html#getInfoCV">getInfoCV</a></li><li><a href="global.html#root">root</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">layouts/WithNavbar.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Outlet } from 'react-router-dom'
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import useConfig from "../hooks/useConfig";
+
+/**
+ * Componente de renderizado de Header y Footer de la App
+ * @since v1.0
+ * @author @emmanuel_carcomo &lt;emmanuelcarcomo@gmail.com> 
+ * @description Inicializando la configuracion del componente, contienen un panel de control dinàmico, capaz de cambiar el idioma y el modo de la app. Ademas segùn el idioma elegido ,el PDF se descarga en ese idioma
+ * @return    {WithNavbar} Componente
+ */
+const WithNavbar = () => {
+  const {handleToggleMode ,handleToggleLanguage, mode , bg_color,language} = useConfig();
+  return (
+    &lt;>
+      &lt;Navbar sticky="top" data-bs-theme={mode} className="bg-body-tertiary border border-danger">
+      &lt;Container fluid='xl' className="d-flex flex-column flex-sm-row">
+          &lt;div style={{"color": (bg_color ==="white"?"black":"white")}} className='mb-2 mb-sm-0'>
+                &lt;img
+                  alt=""
+                  src="../img/logo.svg"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                />{'   '}
+                {language === "espaniol"?(
+                  &lt;strong>CV - Emmanuel Diego Carcomo&lt;/strong>
+                ):(
+                  &lt;strong>Resume - Emmanuel Diego Carcomo&lt;/strong>
+                )}
+          &lt;/div>
+          &lt;div className="d-inline-flex">
+            &lt;Button 
+              href={language === "espaniol"?(
+                '../attachments/EmmanuelCarcomo-cv_es.pdf'
+                ):(
+                '../attachments/EmmanuelCarcomo-cv_en.pdf'
+                )}
+              download="Resume-PDF-document"
+              target="_blank"
+              rel="noreferrer"
+              variant="danger"
+              className="align-self-center"> PDF CV&lt;/Button>
+                &lt;Form className='mx-2'>
+                  &lt;Form.Check
+                      type="switch"
+                      label="Español/English"
+                      id="disabled-custom-switch"
+                      onClick={handleToggleLanguage}
+                      style={{"color": (bg_color ==="white"?"black":"white")}}
+                    />
+                  &lt;Form.Check
+                    type="switch"
+                    label={(mode ==="dark"?"Dark Mode":"Light Mode")}
+                    id="disabled-custom-switch"
+                    onClick={handleToggleMode}
+                    style={{"color": (bg_color ==="white"?"black":"white")}}
+                  />
+                &lt;/Form>
+          &lt;/div>
+          &lt;/Container>
+        &lt;/Navbar>
+        
+        &lt;Outlet/>
+      &lt;Navbar data-bs-theme={mode} sticky="bottom" className="bg-body-tertiary border border-danger">
+        &lt;Container>
+        
+        {language === "espaniol"?(
+          &lt;h5 style={{"color":(bg_color ==="white"?"black":"white")}}>Sitio Web Desarrollado Bajo ReactJS y Boostrap&lt;/h5>
+        ):(
+          &lt;h5 style={{"color":(bg_color ==="white"?"black":"white")}}>Website Developed Under React JS and Bootstrap&lt;/h5>
+        )}
+        
+          &lt;/Container>
+      &lt;/Navbar>
+    &lt;/>
+  )
+}
+
+export default WithNavbar</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Sat Jan 27 2024 01:14:43 GMT-0300 (hora estándar de Argentina) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

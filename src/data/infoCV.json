@@ -9,26 +9,33 @@
                   "email":"emmanuelcarcomo@gmail.com",
                   "link_github":"github.com/Ecarcomo",
                   "link_linkedin":"linkedin.com/in/emmanuel-carcomo-2346a8113",
-                  "img_src":"../img/cvfoto1.png"
+                  "img_src":"../img/cvfoto1.png",
+                  "presentacion":  "Considero que me caracterizo por mi curiosidad e inquietud constante.En un entorno tan dinámico como el actual, creo firmemente en la importancia de la capacitación continua para mantenerme al tanto de las últimas tendencias y tecnologías.\n\nDisfruto compartiendo conocimientos y aprendiendo de las personas que me rodean, tanto en el ámbito laboral como en el personal. Mi enfoque colaborativo me ha permitido crecer profesionalmente y contribuir de manera efectiva a proyectos diversos.\n\nA continuación, encontrarás detalles sobre mi experiencia laboral relevante."
                 },
                 "proyectos": [
                   {
                     "id": 1,
                     "titulo": "Participación – Proyecto Tarjeta Prepaga Carrefour – Lanzamiento Mayo 2023",
                     "descrip":"Colaboré en el desarrollo diferentes funcionalidades para la gestión del nuevo producto de Tarjeta Prepaga a lanzar  por nuestro cliente Carrefour, Desarrollando el alta/baja de tarjeta como los ajustes de saldos y códigos de error de tarjetas proporcionados por  el procesador de pagos PRISMA.",
-                    "tecnologias":"C / C++, PL SQL Oracle, HTML, CSS, JS"
+                    "tecnologias":"C / C++, PL SQL Oracle, HTML, CSS, JS",
+                    "img":"",
+                    "vid":""
                   },
                   {
                     "id": 2,
                     "titulo": "Matriz LED controlada por WIFI desde GUI",
                     "descrip":"Trabajo Final – Materia Informática II – UTN FRBA –Trabajo Grupal 2 personas",
-                    "tecnologias":"Programación de Drivers para microcontrolador LPC1769 en lenguaje C seteo de protocolos GPIO, comunicación  UART con módulo WiFi Esp8266, uso de punteros, memoria dinámica y diseño de máquina de estados. Desarrollo de GUI para control remoto de Matriz LED con lenguaje C++ y framework QT, conexión remota mediante Socket y conexión a API de  Hora y temperatura. Los cuales brindan datos que se visualizan en la matriz."
+                    "tecnologias":"Programación de Drivers para microcontrolador LPC1769 en lenguaje C seteo de protocolos GPIO, comunicación  UART con módulo WiFi Esp8266, uso de punteros, memoria dinámica y diseño de máquina de estados. Desarrollo de GUI para control remoto de Matriz LED con lenguaje C++ y framework QT, conexión remota mediante Socket y conexión a API de  Hora y temperatura. Los cuales brindan datos que se visualizan en la matriz.",
+                    "img":"",
+                    "vid":"../attachments/media/videos/20191218_153130.mp4"
                   },
                   {
                     "id": 3,
                     "titulo": "Pagina E-commerce FrontEnd & BanckEnd en React NodeJS and Nest Enviroment",
                     "descrip":"Proyecto Personal",
-                    "tecnologias":"Sitio Web con carrito de compras hecho con Framework React JS para FrontEnd. Nest Enviroment para el armado del BackEnd."
+                    "tecnologias":"Sitio Web con carrito de compras hecho con Framework React JS para FrontEnd. Nest Enviroment para el armado del BackEnd.",
+                    "img":"../attachments/media/imgs/bv_page.png",
+                    "vid":""
                   }
                 ],
                 "conocimientos": {
@@ -48,6 +55,10 @@
                                 {
                                   "titulo":"Idiomas",
                                   "texto":"Ingles Intermedio Pre-First (Speech & Listering)"
+                                },
+                                {
+                                  "titulo":"Otros",
+                                  "texto":"Docker , JSDOC ,Office , Adobe"
                                 }
                               ]
                   ,
@@ -151,26 +162,33 @@
                   "email": "emmanuelcarcomo@gmail.com",
                   "github_link": "github.com/Ecarcomo",
                   "linkedin_link": "linkedin.com/in/emmanuel-carcomo-2346a8113",
-                  "img_src": "../img/cvfoto1.png"
+                  "img_src": "../img/cvfoto1.png",
+                  "presentation": "I consider that I am characterized by my constant curiosity and restlessness. In a dynamic environment like the current one, I firmly believe in the importance of continuous training to stay informed about the latest trends and technologies.\n\nI enjoy sharing knowledge and learning from the people around me, both in the professional and personal spheres. My collaborative approach has allowed me to grow professionally and contribute effectively to diverse projects.\n\nBelow, you will find details about my relevant work experience."
                 },
                 "projects": [
                   {
                     "id": 1,
                     "title": "Participation – Carrefour Prepaid Card Project – Launch May 2023",
                     "description": "Collaborated in the development of various functionalities for managing the new Carrefour Prepaid Card product. Developed card activation/deactivation, balance adjustments, and error code handling for cards provided by the PRISMA payment processor.",
-                    "technologies": "C / C++, PL SQL Oracle, HTML, CSS, JS"
+                    "technologies": "C / C++, PL SQL Oracle, HTML, CSS, JS",
+                    "img":"",
+                    "vid":""
                   },
                   {
                     "id": 2,
                     "title": "WiFi-Controlled LED Matrix from GUI",
                     "description": "Final Project – Computer Science II Subject – UTN FRBA – Group Project 2 people",
-                    "technologies": "C programming for LPC1769 microcontroller, GPIO protocol setup, UART communication with Esp8266 WiFi module, use of pointers, dynamic memory, and state machine design. GUI development for remote control of LED Matrix using C++ and QT framework, remote connection via Socket, and connection to Hour and Temperature API."
+                    "technologies": "C programming for LPC1769 microcontroller, GPIO protocol setup, UART communication with Esp8266 WiFi module, use of pointers, dynamic memory, and state machine design. GUI development for remote control of LED Matrix using C++ and QT framework, remote connection via Socket, and connection to Hour and Temperature API.",
+                    "img":"",
+                    "vid":"../attachments/media/videos/20191218_153130.mp4"
                   },
                   {
                     "id": 3,
                     "title": "E-commerce Website FrontEnd & BackEnd in React NodeJS and Nest Environment",
                     "description": "Personal Project",
-                    "technologies": "Website with shopping cart made with React JS for FrontEnd. Nest Environment for BackEnd development."
+                    "technologies": "Website with shopping cart made with React JS for FrontEnd. Nest Environment for BackEnd development.",
+                    "img":"../attachments/media/imgs/bv_page.png",
+                    "vid":""
                   }
                 ],
                 "skills": {
@@ -190,6 +208,10 @@
                     {
                       "title": "Languages",
                       "text": "Intermediate Pre-First English (Speech & Listening)"
+                    },
+                    {
+                      "title":"Others",
+                      "text":"Docker , JSDOC ,Office , Adobe"
                     }
                   ],
                   "soft_skills": [

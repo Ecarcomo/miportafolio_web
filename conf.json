@@ -1,0 +1,28 @@
+{   
+    "plugins": [],
+    "recurseDepth": 10,
+    "source": {
+        "includePattern": ".jsx?$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts": {
+        "destination": "./docs/",
+        "encoding": "utf8",
+        "private": true,
+        "recurse": true,
+        "template": "./node_modules/docdash"
+    },
+    "docdash": {
+        "static": false,
+        "sort": true
+    }
+}

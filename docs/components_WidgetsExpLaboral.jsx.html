@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/WidgetsExpLaboral.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#HeaderInfoGeneral">HeaderInfoGeneral</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Navigation">Navigation</a></li><li><a href="global.html#WidgetsConocimientos">WidgetsConocimientos</a></li><li><a href="global.html#WidgetsEducacion">WidgetsEducacion</a></li><li><a href="global.html#WidgetsExpLaboral">WidgetsExpLaboral</a></li><li><a href="global.html#WidgetsProyectos">WidgetsProyectos</a></li><li><a href="global.html#WithNavbar">WithNavbar</a></li><li><a href="global.html#getInfoCV">getInfoCV</a></li><li><a href="global.html#root">root</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/WidgetsExpLaboral.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+
+import React from 'react'
+import useInfoCV from "../hooks/useInfoCV"
+import Spinner from 'react-bootstrap/Spinner';
+
+/**
+ * @desc Seccion de visualizacion sobre la Información Laboral
+ * @param {string} mode variable global REDUX para Dark/Light Mode 
+ * @param {string} language variable global REDUX de idioma 
+ * @example
+ * //Empresas , periodos, puestos y tareas que se realizaron
+ * @returns  {WidgetsExpLaboral} WidgetsExpLaboral
+ */
+ const WidgetsExpLaboral = ({mode,language}) => {
+  const {state , data} = useInfoCV();
+
+  if(state==="success"){
+    const data_es = data.espaniol.exp_laboral;
+    const data_en = data.english.work_experience;
+
+
+    return (
+        &lt;Card border="primary" data-bs-theme={mode}>
+        {language === "espaniol"?(
+          &lt;Card.Header as="h4">Experiencia Laboral&lt;/Card.Header>
+        ):(
+          &lt;Card.Header as="h4">Work Experience&lt;/Card.Header>
+        )}
+        
+        &lt;Card.Body>
+            {language === "espaniol"?(
+              &lt;ListGroup className="list-group-flush">
+              {
+                data_es.map((fila, index) => (
+                    &lt;ListGroup.Item  key={index}> 
+                      &lt;Card.Title>{fila.empresa.tipo} - {fila.empresa.nombre}&lt;/Card.Title>
+                      &lt;cite>&lt;strong>Sector: &lt;/strong>{fila.sector}&lt;/cite>
+                      &lt;br>&lt;/br>
+                      {
+                        fila.puestos.map((puesto,i)=>(
+                          &lt;div key={i}>
+                          &lt;strong >&lt;small id={i}>{puesto.breve} / {puesto.intervalo}&lt;/small>&lt;/strong>
+                            &lt;ul>
+                            {
+                              puesto.tareas.map((tarea,t)=>(
+                                &lt;li key={t}>{tarea}&lt;/li>
+                              ))
+                            }
+                            &lt;/ul>
+                          &lt;/div>
+                        ))
+                      }
+                    &lt;/ListGroup.Item>
+                ))
+              }
+            &lt;/ListGroup>
+            ):(
+              &lt;ListGroup className="list-group-flush">
+              {
+                data_en.map((fila, index) => (
+                    &lt;ListGroup.Item  key={index}> 
+                      &lt;Card.Title>{fila.company.type} - {fila.company.name}&lt;/Card.Title>
+                      &lt;cite>&lt;strong>Sector: &lt;/strong>{fila.sector}&lt;/cite>
+                      &lt;br>&lt;/br>
+                      {
+                        fila.positions.map((position,i)=>(
+                          &lt;div key={i}>
+                          &lt;strong >&lt;small id={i}>{position.brief} / {position.period}&lt;/small>&lt;/strong>
+                            &lt;ul>
+                            {
+                              position.tasks.map((task,t)=>(
+                                &lt;li key={t}>{task}&lt;/li>
+                              ))
+                            }
+                            &lt;/ul>
+                          &lt;/div>
+                        ))
+                      }
+                    &lt;/ListGroup.Item>
+                ))
+              }
+            &lt;/ListGroup>
+            )}
+        &lt;/Card.Body>
+    &lt;/Card>
+    )
+
+}
+
+return (
+    &lt;Card border="primary" data-bs-theme={mode}>
+        &lt;Card.Body>
+            &lt;Card.Title>&lt;Spinner animation="grow" />&lt;/Card.Title>
+        &lt;/Card.Body>
+    &lt;/Card>
+)
+  
+};
+
+export default WidgetsExpLaboral;
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Sat Jan 27 2024 01:14:43 GMT-0300 (hora estándar de Argentina) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
