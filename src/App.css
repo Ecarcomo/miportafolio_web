@@ -47,3 +47,10 @@
   background-color: #212529!important;
   color: #fff!important;
 }
+
+.yr-tag{
+  display: block;
+  font-size: medium;
+  font-weight: 200;
+  font-family: sans-serif;
+}

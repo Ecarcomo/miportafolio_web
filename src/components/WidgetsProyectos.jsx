@@ -45,7 +45,7 @@ import Modal from 'react-bootstrap/Modal';
               {
                 data_es.map((fila, index) => (
                     <ListGroup.Item  key={index}> 
-                      <Card.Title>{fila.titulo}</Card.Title>
+                      <Card.Title>{fila.titulo}<span className='yr-tag'>{fila.anio}</span></Card.Title>
                       <Card.Text>{fila.descrip.substring(0, 100)+"..."}</Card.Text>
                       <footer className="blockquote-footer">
                       <cite>{fila.tecnologias.substring(0, 50)+"..."}</cite>
@@ -60,7 +60,7 @@ import Modal from 'react-bootstrap/Modal';
               {
                 data_en.map((fila, index) => (
                     <ListGroup.Item  key={index}> 
-                      <Card.Title>{fila.title}</Card.Title>
+                      <Card.Title>{fila.title}<span className='yr-tag'>{fila.year}</span></Card.Title>
                       <Card.Text>{fila.description.substring(0, 100)+"..."}</Card.Text>
                       <footer className="blockquote-footer">
                       <cite>{fila.technologies.substring(0, 50)+"..."}</cite>
@@ -115,30 +115,40 @@ function MyVerticallyCenteredModal(props) {
       <>
         <Modal.Header closeButton >
           <Modal.Title id="contained-modal-title-vcenter">
-            {_data.titulo}
+            {_data.titulo}<span className='yr-tag'>{_data.anio}</span>
           </Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
         <center>
         {
-          _data.img!=="" && <img src={_data.img} width={'50%'} alt={_data.titulo}></img>
+          _data.img!=="" && <img src={_data.img}  width="90%"  height="360" alt={_data.titulo}></img>
         }
         {
-          _data.vid!=="" && <video  width="640" height="360" controls>
+          _data.vid!=="" && <video   width="90%"  height="360" controls>
                                 <source src={ _data.vid} type="video/mp4" />
                                 Tu navegador no soporta el elemento de video.
                             </video>
         }
         </center>
+       {(_data.img!=="" ||_data.vid!=="") && <hr></hr>} 
           <h4>Breve descripción:</h4>
-          <p>
-          {_data.descrip}
-          </p>
+            <p>
+            {_data.descrip}
+            </p>
           <h4>Tecnologías utilizadas:</h4>
-          <p>
-          {_data.tecnologias}
-          </p>
+            <p>
+            {_data.tecnologias}
+            </p>
+        {
+          _data.link!=="" && 
+          <>
+            <h4>Links:</h4>
+              <small><a href={_data.link}>
+              {_data.link}
+              </a></small>
+          </>
+        }
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
@@ -148,29 +158,38 @@ function MyVerticallyCenteredModal(props) {
       <>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-          {_data.title}
+          {_data.title}<span className='yr-tag'>{_data.year}</span>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <center>
         {
-          _data.img!=="" && <img src={_data.img} width={'50%'} alt={_data.title}></img>
+          _data.img!=="" && <img src={_data.img}  width="90%"  height="360" alt={_data.title}></img>
         }
         {
-          _data.vid!=="" && <video  width="640" height="360" controls>
+          _data.vid!=="" && <video  width="90%"  height="360"  controls>
                                 <source src={ _data.vid} type="video/mp4" />
                                 Your browser not support this video element.
                             </video>
         }
         </center>
-          <h4>Brief:</h4>
+        <h4>Brief:</h4>
           <p>
           {_data.description}
           </p>
-          <h4>Technologies:</h4>
+        <h4>Technologies:</h4>
           <p>
           {_data.technologies}
           </p>
+          {
+            _data.link!=="" && 
+            <>
+              <h4>Links:</h4>
+                <small><a href={_data.link}>
+                {_data.link}
+                </a></small>
+            </>
+          }
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
