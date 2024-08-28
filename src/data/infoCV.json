@@ -47,8 +47,12 @@
                 "conocimientos": {
                   "h_duras":  [ 
                                 {
-                                  "titulo":"Lenguajes de programación",
-                                  "texto":"C , C++ , React JS , JAVA , Python, MySQL ,PL/SQL Oracle"
+                                  "titulo":"FrontEnd",
+                                  "texto":"ReactJS , TypeScript ,ThreeJS"
+                                },
+                                {
+                                  "titulo":"BackEnd",
+                                  "texto":"NestJS , ExpressJS , C , C++ , JAVA , Python, MySQL ,PL/SQL Oracle ,PHP"
                                 },
                                 {
                                   "titulo":"Aplica en",
