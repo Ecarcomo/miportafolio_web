@@ -55,12 +55,12 @@
                                   "texto":"NestJS , ExpressJS , C , C++ , JAVA , Python, MySQL ,PL/SQL Oracle ,PHP"
                                 },
                                 {
-                                  "titulo":"Aplica en",
-                                  "texto":"Webs , Webservices , Android , Arduino, PIC's"
+                                  "titulo":"Aplicados en",
+                                  "texto":"Webs , API’s, Webservices  , Android Apps, Proyectos Arduino , PIC’s"
                                 },
                                 {
                                   "titulo":"O.S.",
-                                  "texto":"Ubuntu Linux Terminal , Windows CMD"
+                                  "texto":"Ubuntu  Linux Terminal , Windows CMD , WSL "
                                 },
                                 {
                                   "titulo":"Idiomas",
@@ -210,16 +210,20 @@
                 "skills": {
                   "hard_skills": [
                     {
-                      "title": "Programming languages",
-                      "text": "C, C++, React JS, JAVA, Python, MySQL, PL/SQL Oracle"
+                      "title":"FrontEnd",
+                      "text":"ReactJS , TypeScript ,ThreeJS"
+                    },
+                    {
+                      "title":"BackEnd",
+                      "text":"NestJS , ExpressJS , C , C++ , JAVA , Python, MySQL ,PL/SQL Oracle ,PHP"
                     },
                     {
                       "title": "Applies to",
-                      "text": "Websites, Web services, Android, Arduino, PIC's"
+                      "text": "Webs , API’s, Webservices  , Android Apps, Proyectos Arduino , PIC’s"
                     },
                     {
                       "title": "Operating Systems",
-                      "text": "Ubuntu Linux Terminal, Windows CMD"
+                      "text": "Ubuntu  Linux Terminal , Windows CMD , WSL "
                     },
                     {
                       "title": "Languages",
