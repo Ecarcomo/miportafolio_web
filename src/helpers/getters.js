@@ -13,8 +13,7 @@ export const getInfoCV = createAsyncThunk(
         'get-info_cv',
         async () => {
         try {
-               
-                        return infoCV;
+                return infoCV;
                
         } catch (error) {
                 throw Error('Error fetching data');

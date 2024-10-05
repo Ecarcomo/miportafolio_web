@@ -17,7 +17,7 @@ import HeaderInfoGeneral from "../components/HeaderInfoGeneral"
  */
 const Home = ({mode,bg_color,language}) => {
         return (
-        <div style={{"backgroundColor":bg_color}}>
+        <div  className=""style={{"backgroundColor":bg_color}}>
           <Container
            fluid='xl' 
            lg='12'

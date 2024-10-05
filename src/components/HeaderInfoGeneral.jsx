@@ -28,9 +28,8 @@ const HeaderInfoGeneral = ({mode,language}) => {
 
 
         return (
-            <Card border="primary" data-bs-theme={mode}>
-            <Card.Body>
-              <Container >
+
+              <Container style={{'color':(mode ==='light'?'#000':'#fff')}}>
                 {language === "espaniol"?(
                     <>
                     <Row   className='gy-3'  style={{"alignItems": "center"}}>
@@ -41,8 +40,7 @@ const HeaderInfoGeneral = ({mode,language}) => {
                             <h4><strong>{data_es.nombre}</strong></h4>
                             <p><strong>{data_es.profesion}</strong></p>
                             <cite>{data_es.Lugar} / Nacimiento: {data_es.fecha_nacimiento}</cite>
-                        </Col>
-                        <Col >
+
                             <small>Telefono:    {data_es.num_tel}</small>
                             <br></br>
                             <small>Email:   {data_es.email}</small>
@@ -52,7 +50,7 @@ const HeaderInfoGeneral = ({mode,language}) => {
                             <small><Link target="_blank" to={"https://"+data_es.link_linkedin} >{data_es.link_linkedin}</Link></small>
                         </Col>
                     </Row>
-                    <Row  style={{"alignItems": "center","marginTop":"10px"}}>
+                    <Row  style={{"alignItems": "center","marginTop":"30px"}}>
                         <Col style={{"textAlign": "center"}}>
                         <cite>
                         {
@@ -99,8 +97,7 @@ const HeaderInfoGeneral = ({mode,language}) => {
                     </>
                 )}
                 </Container>
-            </Card.Body>
-        </Card>
+
         )
 
     }

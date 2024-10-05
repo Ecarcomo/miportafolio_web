@@ -1,5 +1,6 @@
 .imgProfile{
-    border-radius: 30px;
+    border-radius: 20% 5%;
     border: 1px solid #ddd;
-    height: 10rem;
+    box-shadow: 10px 10px 50px;
+    height: 15rem;
 }
