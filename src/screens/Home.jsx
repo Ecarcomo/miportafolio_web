@@ -8,6 +8,7 @@ import WidgetsEducacion from "../components/WidgetsEducacion"
 import WidgetsExpLaboral from "../components/WidgetsExpLaboral"
 import HeaderInfoGeneral from "../components/HeaderInfoGeneral"
 
+import useInfoCV from "../hooks/useInfoCV"
 /**
  * Vista principal de App en donde se invocan todos los componentes de cada categorìa del curriculum
  * @param {string} mode variable global REDUX para Dark/Light Mode 
@@ -16,6 +17,7 @@ import HeaderInfoGeneral from "../components/HeaderInfoGeneral"
  * @returns  {Home} Home
  */
 const Home = ({mode,bg_color,language}) => {
+  const {state , data} = useInfoCV();
         return (
         <div style={{"backgroundColor":bg_color}}>
           <Container
@@ -25,20 +27,20 @@ const Home = ({mode,bg_color,language}) => {
           >
             <br></br>
             <Row >
-              <Col ><HeaderInfoGeneral mode={mode} language={language}/></Col>
+              <Col ><HeaderInfoGeneral mode={mode} language={language} state={state} data={data}/></Col>
             </Row>
             <br></br>
             <Row >
-              <Col ><WidgetsExpLaboral mode={mode} language={language}/></Col>
+              <Col ><WidgetsExpLaboral mode={mode} language={language} state={state} data={data}/></Col>
             </Row>
             <br></br>
             <Row >
-              <Col ><WidgetsEducacion mode={mode} language={language}/></Col>
+              <Col ><WidgetsEducacion mode={mode} language={language} state={state} data={data}/></Col>
             </Row>
             <br></br>
             <Row className='gy-3' >
-              <Col lg='6' md='12'><WidgetsProyectos mode={mode} language={language}/></Col>
-              <Col lg='6' md='12'><WidgetsConocimientos mode={mode} language={language}/></Col>
+              <Col lg='6' md='12'><WidgetsProyectos mode={mode} language={language} state={state} data={data}/></Col>
+              <Col lg='6' md='12'><WidgetsConocimientos mode={mode} language={language} state={state} data={data}/></Col>
             </Row>
             <br></br>
           </Container>

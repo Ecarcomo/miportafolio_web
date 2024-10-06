@@ -7,7 +7,7 @@ const initialState = {
 }
 
 const infoCVSlice = createSlice({
-  name: '@conocimientos',
+  name: '@infocv',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
