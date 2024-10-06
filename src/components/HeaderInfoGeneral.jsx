@@ -1,5 +1,5 @@
 import React from 'react'
-import useInfoCV from "../hooks/useInfoCV"
+
 import { Link } from 'react-router-dom';
 
 import Card from 'react-bootstrap/Card';
@@ -19,8 +19,8 @@ import Spinner from 'react-bootstrap/Spinner';
  * //Carta de presentacion
  * @returns  {HeaderInfoGeneral} HeaderInfoGeneral
  */
-const HeaderInfoGeneral = ({mode,language}) => {
-    const {state , data} = useInfoCV();
+const HeaderInfoGeneral = ({mode,language,state,data}) => {
+    
 
     if(state==="success"){
         const data_es = data.espaniol.info_general;
