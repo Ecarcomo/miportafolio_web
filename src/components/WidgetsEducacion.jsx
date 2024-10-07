@@ -71,7 +71,9 @@ import Spinner from 'react-bootstrap/Spinner';
 return (
     <Card border="primary" data-bs-theme={mode}>
         <Card.Body>
-            <Card.Title><Spinner animation="grow" /></Card.Title>
+          <Card.Title>
+            <span className='connectFB'><Spinner animation="grow" />{(language === "espaniol"? <>Conectando con</> :<>Connecting with</>)} Firebase ...</span>
+            </Card.Title>
         </Card.Body>
     </Card>
 )
